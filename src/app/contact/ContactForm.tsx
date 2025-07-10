@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { FaUser, FaEnvelope, FaCommentDots, FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
+import { FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 
 const serviceKeywords = [

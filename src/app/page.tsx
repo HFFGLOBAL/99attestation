@@ -209,7 +209,7 @@ function TestimonialCard({ name, quote, rating }: { name: string; quote: string;
           <StarIcon key={i} className="w-5 h-5 text-orange" />
         ))}
       </div>
-      <p className="text-navy italic mb-3">"{quote}"</p>
+      <p className="text-navy italic mb-3">&quot;{quote}&quot;</p>
       <span className="font-bold-custom text-navy">{name}</span>
     </div>
   );

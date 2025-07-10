@@ -1,6 +1,9 @@
+"use client";
+
 import SectionHeader from '../../../components/SectionHeader';
 import CTAButton from '../../../components/CTAButton';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 
 const documents = [
   'Educational Certificates',
@@ -32,19 +35,20 @@ const whatsappNumber = '9686924808'; // Replace with your WhatsApp number
 const whatsappMessage = encodeURIComponent('Hello, I need expert advice on apostille services.');
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-export default function CountryApostillePage({ params }) {
-  const country = params?.country || 'Country';
+export default function Page() {
+  const { country } = useParams();
+  const countryName = country || 'Country';
   return (
     <main className="service-page-container">
       {/* Hero Section */}
       <section className="hero-section">
-        <h1>{country} Apostille</h1>
-        <p>Get your documents apostilled for use in {country}. Fast, secure, and globally accepted.</p>
+        <h1>{countryName} Apostille</h1>
+        <p>Get your documents apostilled for use in {countryName}. Fast, secure, and globally accepted.</p>
       </section>
 
       {/* Relevant Documents Section */}
       <section className="services-section">
-        <SectionHeader title={`Documents We Apostille for ${country}`} />
+        <SectionHeader title={`Documents We Apostille for ${countryName}`} />
         <ul className="usp-list">
           {documents.map((doc, idx) => (
             <li key={idx}>{doc}</li>
@@ -54,7 +58,7 @@ export default function CountryApostillePage({ params }) {
 
       {/* Types of Apostille */}
       <section className="services-section">
-        <SectionHeader title={`Types of Apostille for ${country}`} />
+        <SectionHeader title={`Types of Apostille for ${countryName}`} />
         <ul className="usp-list">
           {apostilleTypes.map((type, idx) => (
             <li key={idx}>{type}</li>

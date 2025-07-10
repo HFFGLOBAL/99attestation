@@ -1,29 +1,8 @@
 "use client";
 import { useState } from "react";
-import { ChevronDownIcon, PhoneIcon, EnvelopeIcon, Bars3Icon, XMarkIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import { ChevronDownIcon, PhoneIcon, EnvelopeIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
-
-const services = [
-  { name: "Educational Attestation", href: "/services/educational-attestation" },
-  { name: "Personal Attestation", href: "/services/personal-attestation" },
-  { name: "Commercial Attestation", href: "/services/commercial-attestation" },
-  { name: "Apostille", href: "/services/apostille" },
-  { name: "HRD", href: "/services/hrd" },
-  { name: "MEA", href: "/services/mea" },
-  { name: "PCC", href: "/services/pcc" },
-  { name: "WES Verification", href: "/services/wes-verification" },
-  { name: "Translation", href: "/services/translation" },
-];
-
-const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Services", href: "#services" }, // Will handle dropdown separately
-  { name: "Countries", href: "/countries" },
-  { name: "How It Works", href: "/how-it-works" },
-  { name: "About Us", href: "/about" },
-  { name: "Contact Us", href: "/contact" },
-];
 
 const branches = [
   { city: "Bangalore", phone: "9686924808" },
@@ -33,9 +12,7 @@ const branches = [
 ];
 
 export default function Header() {
-  const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [branchesOpen, setBranchesOpen] = useState(false);
 
   return (
@@ -55,7 +32,7 @@ export default function Header() {
             </span>
             {/* Desktop: Show all branches and email */}
             <>
-              {branches.map((b, idx) => (
+              {branches.map((b) => (
                 <span key={b.city} className="hidden md:flex items-center gap-1"><PhoneIcon className="w-4 h-4" />{b.city}: <a href={`tel:${b.phone}`} className="hover:underline text-cream font-bold-custom">{b.phone}</a></span>
               ))}
               <span className="hidden md:flex items-center gap-1"><EnvelopeIcon className="w-4 h-4" /> info@99attestation.com</span>

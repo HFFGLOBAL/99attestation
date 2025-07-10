@@ -50,19 +50,6 @@ const serviceKeywords = [
   "Notary Services"
 ];
 
-const team = [
-  { name: "Rohit Mehra", role: "Founder & CEO", img: "/team1.jpg", bio: "Visionary leader with 15+ years in attestation and global document services." },
-  { name: "Anjali Singh", role: "Head of Operations", img: "/team2.jpg", bio: "Ensures every client receives fast, reliable, and secure service." },
-  { name: "Sandeep Kumar", role: "Client Success Lead", img: "/team3.jpg", bio: "Dedicated to making your attestation journey seamless and stress-free." }
-];
-
-const milestones = [
-  { year: "2009", text: "Company founded by industry experts." },
-  { year: "2012", text: "Expanded to serve 50+ countries." },
-  { year: "2017", text: "10,000+ documents processed." },
-  { year: "2023", text: "Recognized as a top attestation provider in India." }
-];
-
 export default function AboutPage() {
   return (
     <section className="max-w-6xl mx-auto py-16 px-4 fade-in">
@@ -115,7 +102,7 @@ export default function AboutPage() {
                   <StarIcon key={i} className="w-5 h-5 text-orange" />
                 ))}
               </div>
-              <p className="text-navy italic mb-3">"{t.quote}"</p>
+              <p className="text-navy italic mb-3">&quot;{t.quote}&quot;</p>
               <span className="font-bold-custom text-navy">{t.name}</span>
             </div>
           ))}

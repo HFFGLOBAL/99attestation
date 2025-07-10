@@ -1,4 +1,5 @@
 import FAQClient from "./FAQClient";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Attestation Services | 99Attestation",
