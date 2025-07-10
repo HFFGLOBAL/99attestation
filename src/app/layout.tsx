@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import { Nunito, PT_Sans } from "next/font/google";
+// import { Nunito, PT_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import WhatsAppButton from "./components/WhatsAppButton";
 
-const nunito = Nunito({
-  variable: "--font-nunito",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
-
-const ptSans = PT_Sans({
-  variable: "--font-pt-sans",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
+// const nunito = Nunito({
+//   variable: "--font-nunito",
+//   subsets: ["latin"],
+//   weight: ["400", "700"],
+// });
+//
+// const ptSans = PT_Sans({
+//   variable: "--font-pt-sans",
+//   subsets: ["latin"],
+//   weight: ["400", "700"],
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${nunito.variable} ${ptSans.variable}`}>
+    <html lang="en">
       <body>
         <Header />
         <main>{children}</main>
