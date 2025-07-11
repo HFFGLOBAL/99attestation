@@ -1,7 +1,6 @@
 import { CheckCircleIcon, ClockIcon, ShieldCheckIcon, CurrencyRupeeIcon, PhoneIcon, UserGroupIcon, GlobeAltIcon, DocumentCheckIcon, ArrowRightIcon, StarIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
-import { Breadcrumbs } from "./components/SectionHeader";
 
 export const metadata = {
   title: "99Attestation.com | Fast & Reliable Document Attestation Services",

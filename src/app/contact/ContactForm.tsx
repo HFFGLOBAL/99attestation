@@ -71,7 +71,6 @@ export default function ContactForm() {
   }
 
   // Service-specific logic
-  const isCountrySpecific = ["Apostille", "Embassy Attestation"].includes(form.service);
   const isDocTypeNeeded = ["Apostille", "Educational Attestation", "Personal Attestation", "Commercial Attestation", "Embassy Attestation"].includes(form.service);
 
   return (
