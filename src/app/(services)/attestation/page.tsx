@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { AcademicCapIcon, UserIcon, BriefcaseIcon, GlobeAltIcon, BuildingLibraryIcon } from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
   title: "Attestation Services | 99Attestation",
@@ -9,11 +8,11 @@ export const metadata: Metadata = {
 };
 
 const attestationTypes = [
-  { title: "Educational Attestation", desc: "Degree, diploma, and school certificates attested for study, work, or migration abroad. Includes HRD, MEA, embassy, and university verification.", icon: AcademicCapIcon, href: "/(services)/educational-attestation" },
-  { title: "Personal Attestation", desc: "Birth, marriage, divorce, and personal documents attested for family, legal, or immigration purposes. Includes affidavits, medical, and police certificates.", icon: UserIcon, href: "/(services)/personal-attestation" },
-  { title: "Commercial Attestation", desc: "Business, export, and company documents attested for international trade, business setup, and legal compliance. Includes power of attorney, invoices, and more.", icon: BriefcaseIcon, href: "/(services)/commercial-attestation" },
-  { title: "Apostille Services", desc: "Apostille for Hague Convention countries, making your documents valid internationally without further embassy legalization.", icon: GlobeAltIcon, href: "/(services)/apostille" },
-  { title: "Embassy Attestation", desc: "End-to-end embassy attestation for non-Hague countries, including UAE, Oman, Qatar, Kuwait, Saudi Arabia, and more.", icon: BuildingLibraryIcon, href: "/(services)/mea-attestation" },
+  { title: "Educational Attestation", desc: "Degree, diploma, and school certificates attested for study, work, or migration abroad. Includes HRD, MEA, embassy, and university verification." },
+  { title: "Personal Attestation", desc: "Birth, marriage, divorce, and personal documents attested for family, legal, or immigration purposes. Includes affidavits, medical, and police certificates." },
+  { title: "Commercial Attestation", desc: "Business, export, and company documents attested for international trade, business setup, and legal compliance. Includes power of attorney, invoices, and more." },
+  { title: "Apostille Services", desc: "Apostille for Hague Convention countries, making your documents valid internationally without further embassy legalization." },
+  { title: "Embassy Attestation", desc: "End-to-end embassy attestation for non-Hague countries, including UAE, Oman, Qatar, Kuwait, Saudi Arabia, and more." },
 ];
 
 const documentTypes = [
@@ -79,18 +78,12 @@ export default function AttestationPage() {
       {/* Types of Attestation */}
       <div className="mb-16">
         <h2 className="text-2xl font-bold-custom text-navy mb-6 text-center">Types of Attestation</h2>
-        <div className="flex gap-8 overflow-x-auto pb-2 md:grid md:grid-cols-3 lg:grid-cols-5 md:gap-8 md:overflow-visible">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {attestationTypes.map((type) => (
-            <a
-              key={type.title}
-              href={type.href}
-              className="group bg-cream rounded-xl p-6 shadow border border-yellow/30 text-center min-w-[260px] transition-transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-orange flex flex-col items-center"
-              tabIndex={0}
-            >
-              <type.icon className="w-10 h-10 text-orange mb-3" />
+            <div key={type.title} className="bg-cream rounded-xl p-6 shadow border border-yellow/30 text-center hover-raise transition">
               <h3 className="text-xl font-bold-custom text-navy mb-2">{type.title}</h3>
               <p className="text-navy text-base">{type.desc}</p>
-            </a>
+            </div>
           ))}
         </div>
       </div>

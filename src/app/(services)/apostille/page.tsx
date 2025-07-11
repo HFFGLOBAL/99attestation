@@ -3,35 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Apostille Services | 99Attestation",
-  description: "Get your documents apostilled for use in Hague Convention countries. Fast, secure, and globally accepted.",
-  openGraph: {
-    title: "Apostille Services | 99Attestation",
-    description: "Get your documents apostilled for use in Hague Convention countries. Fast, secure, and globally accepted.",
-    url: "https://99attestation.com/services/apostille",
-    siteName: "99Attestation.com",
-    images: [
-      {
-        url: "/hero-world-map.png",
-        width: 1200,
-        height: 630,
-        alt: "Apostille Services - 99Attestation",
-      },
-    ],
-    locale: "en_US",
-    type: "article",
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@99attestation",
-    title: "Apostille Services | 99Attestation",
-    description: "Get your documents apostilled for use in Hague Convention countries. Fast, secure, and globally accepted.",
-    images: [
-      {
-        url: "/hero-world-map.png",
-        alt: "Apostille Services - 99Attestation",
-      },
-    ],
-  },
+  description: "Get your documents apostilled quickly and securely for international use. Serving all Hague Convention countries.",
   keywords: [
     "apostille",
     "apostille services",
@@ -156,6 +128,7 @@ export default function ApostillePage() {
             </Link>
           ))}
         </div>
+        <p className="text-center text-navy mt-4">We serve all Hague Convention countries. <Link href="/countries" className="text-orange font-bold-custom hover-underline">See all countries</Link></p>
       </div>
 
       {/* Why Choose Us */}
@@ -232,23 +205,6 @@ export default function ApostillePage() {
           Talk to an Expert
         </a>
       </div>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Apostille Services",
-            "provider": {
-              "@type": "Organization",
-              "name": "99Attestation.com",
-              "url": "https://99attestation.com/"
-            },
-            "areaServed": "Worldwide",
-            "description": "Get your documents apostilled for use in Hague Convention countries. Fast, secure, and globally accepted."
-          })
-        }}
-      />
     </section>
   );
 }

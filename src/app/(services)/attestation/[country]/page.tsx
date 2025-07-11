@@ -1,174 +1,115 @@
-import { Metadata } from "next";
-import Link from "next/link";
+"use client";
+import SectionHeader from '../../../components/SectionHeader';
+import CTAButton from '../../../components/CTAButton';
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
 
-// --- Sample Data ---
-const countryData: Record<string, {
-  name: string;
-  flag: string;
-  process: string[];
-  whyNeeded: string[];
-  documents: {
-    educational: string[];
-    nonEducational: string[];
-    commercial: string[];
-  };
-  checklist: string[];
-  faqs: { q: string; a: string }[];
-  related: { name: string; href: string }[];
-}> = {
-  uae: {
-    name: "United Arab Emirates",
-    flag: "🇦🇪",
-    process: [
-      "State HRD/Home Attestation",
-      "MEA Attestation",
-      "UAE Embassy Attestation",
-      "MOFA Attestation (if needed)"
-    ],
-    whyNeeded: [
-      "Employment Visa",
-      "Family Visa",
-      "Higher Education",
-      "Business Setup",
-      "Job Change/Promotion"
-    ],
-    documents: {
-      educational: ["Degree Certificate", "Diploma Certificate", "Transcript"],
-      nonEducational: ["Birth Certificate", "Marriage Certificate", "PCC"],
-      commercial: ["Power of Attorney", "Commercial Invoice"]
-    },
-    checklist: [
-      "Original certificate",
-      "Passport copy",
-      "Authorization letter (if required)"
-    ],
-    faqs: [
-      { q: "How long does UAE attestation take?", a: "Usually 7-15 business days." },
-      { q: "Is MOFA attestation required?", a: "For some cases, yes. We will guide you." }
-    ],
-    related: [
-      { name: "MEA Attestation", href: "/services/mea-attestation" },
-      { name: "Translation", href: "/services/translation" },
-      { name: "Apostille", href: "/services/apostille" }
-    ]
+const documents = [
+  'Educational Certificates',
+  'Personal Certificates',
+  'Commercial Documents',
+  'Birth/Marriage Certificates',
+  'Degree/Diploma Certificates',
+];
+
+const attestationTypes = [
+  'Educational Attestation',
+  'Personal Attestation',
+  'Commercial Attestation',
+  'Embassy Attestation',
+  'MOFA Attestation',
+];
+
+const testimonials = [
+  {
+    name: 'Amit S.',
+    feedback: 'The attestation process for UAE was smooth and fast. Highly recommended!',
   },
-  // Add more countries as needed
-};
+  {
+    name: 'Priya R.',
+    feedback: 'Excellent support and timely updates. Got my documents attested for Canada without hassle.',
+  },
+];
 
-export async function generateStaticParams() {
-  return Object.keys(countryData).map((country) => ({ country }));
-}
+const whatsappNumber = '9686924808'; // Replace with your WhatsApp number
+const whatsappMessage = encodeURIComponent('Hello, I need expert advice on attestation services.');
+const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-export async function generateMetadata({ params }: { params: { country: string } }): Promise<Metadata> {
-  const country = countryData[params.country]?.name || "Country";
-  return {
-    title: `${country} Embassy Attestation | 99Attestation`,
-    description: `Fast, reliable, and secure attestation for ${country}. Employment, family, education, and business. WhatsApp or talk to experts now!`,
-  };
-}
-
-export default function Page({ params }: { params: { country: string } }) {
-  const data = countryData[params.country] || countryData.uae;
+export default function Page() {
+  const { country } = useParams();
+  const countryName = country || 'Country';
   return (
-    <section className="max-w-4xl mx-auto py-10 px-4 fade-in">
-      {/* Hero */}
-      <div className="flex flex-col items-center text-center mb-10">
-        <span className="text-6xl mb-2">{data.flag}</span>
-        <h1 className="text-3xl md:text-4xl font-extrabold text-navy mb-2">{data.name} Embassy Attestation</h1>
-        <p className="text-lg text-navy mb-4">Fast, reliable, and secure attestation for {data.name} from India.</p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-2">
-          <a href="https://wa.me/919686924808" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full font-bold-custom text-lg shadow-lg transition-all duration-200">WhatsApp Expert</a>
-          <a href="tel:9686924808" className="bg-orange hover:bg-yellow text-navy px-8 py-3 rounded-full font-bold-custom text-lg shadow-lg transition-all duration-200">Talk to Experts</a>
-          <a href="/contact" className="bg-navy hover:bg-orange text-cream px-8 py-3 rounded-full font-bold-custom text-lg shadow-lg transition-all duration-200">Enquiry Form</a>
-        </div>
-      </div>
+    <main className="service-page-container">
+      {/* Hero Section */}
+      <section className="hero-section">
+        <h1>{countryName} Attestation</h1>
+        <p>Get your documents attested for use in {countryName}. Fast, secure, and globally accepted.</p>
+      </section>
 
-      {/* Why Needed */}
-      <div className="mb-10">
-        <h2 className="text-xl font-bold-custom text-navy mb-3">Why is Attestation Needed?</h2>
-        <ul className="list-disc pl-6 text-navy space-y-1">
-          {data.whyNeeded.map((reason: string) => <li key={reason}>{reason}</li>)}
+      {/* Relevant Documents Section */}
+      <section className="services-section">
+        <SectionHeader title={`Documents We Attest for ${countryName}`} />
+        <ul className="usp-list">
+          {documents.map((doc, idx) => (
+            <li key={idx}>{doc}</li>
+          ))}
         </ul>
-      </div>
+      </section>
 
-      {/* Step-by-Step Process */}
-      <div className="mb-10">
-        <h2 className="text-xl font-bold-custom text-navy mb-3">Step-by-Step Process</h2>
-        <ol className="list-decimal pl-6 text-navy space-y-1">
-          {data.process.map((step: string) => <li key={step}>{step}</li>)}
+      {/* Types of Attestation */}
+      <section className="services-section">
+        <SectionHeader title={`Types of Attestation for ${countryName}`} />
+        <ul className="usp-list">
+          {attestationTypes.map((type, idx) => (
+            <li key={idx}>{type}</li>
+          ))}
+        </ul>
+      </section>
+
+      {/* Our Process / How It Works */}
+      <section className="how-it-works-section">
+        <SectionHeader title="Our Process" />
+        <ol className="how-it-works-list">
+          <li>Submit your documents online or at our office</li>
+          <li>We verify and process your documents through all required authorities</li>
+          <li>Receive attested documents quickly and securely at your doorstep</li>
         </ol>
-      </div>
+      </section>
 
-      {/* Document Types */}
-      <div className="mb-10">
-        <h2 className="text-xl font-bold-custom text-navy mb-3">Document Types</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div>
-            <h3 className="font-bold-custom text-orange mb-2">Educational</h3>
-            <ul className="list-disc pl-5 text-navy space-y-1">
-              {data.documents.educational.map((doc: string) => <li key={doc}>{doc}</li>)}
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-bold-custom text-orange mb-2">Non-Educational</h3>
-            <ul className="list-disc pl-5 text-navy space-y-1">
-              {data.documents.nonEducational.map((doc: string) => <li key={doc}>{doc}</li>)}
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-bold-custom text-orange mb-2">Commercial</h3>
-            <ul className="list-disc pl-5 text-navy space-y-1">
-              {data.documents.commercial.map((doc: string) => <li key={doc}>{doc}</li>)}
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* Checklist */}
-      <div className="mb-10">
-        <h2 className="text-xl font-bold-custom text-navy mb-3">Checklist</h2>
-        <ul className="list-disc pl-6 text-navy space-y-1">
-          {data.checklist.map((item: string) => <li key={item}>{item}</li>)}
-        </ul>
-      </div>
-
-      {/* Why Choose Us */}
-      <div className="mb-10">
-        <h2 className="text-xl font-bold-custom text-navy mb-3">Why Choose 99Attestation?</h2>
-        <ul className="list-disc pl-6 text-navy space-y-1">
-          <li>10,000+ documents processed</li>
-          <li>Govt. approved & ISO certified</li>
-          <li>24/7 support & expert guidance</li>
-          <li>Secure, transparent, and fast process</li>
-        </ul>
-      </div>
-
-      {/* FAQ */}
-      <div className="mb-10">
-        <h2 className="text-xl font-bold-custom text-navy mb-3">Frequently Asked Questions</h2>
-        <div className="space-y-4">
-          {data.faqs.map((faq: { q: string; a: string }, idx: number) => (
-            <div key={idx} className="bg-cream rounded-lg p-4 shadow">
-              <details>
-                <summary className="font-bold-custom text-navy cursor-pointer flex justify-between items-center">{faq.q}<span className="ml-2 text-orange">+</span></summary>
-                <div className="mt-2 text-navy">{faq.a}</div>
-              </details>
+      {/* Testimonials */}
+      <section className="services-section">
+        <SectionHeader title="What Our Clients Say" />
+        <div style={{display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'center'}}>
+          {testimonials.map((t, idx) => (
+            <div key={idx} style={{background: '#f7f7f7', borderRadius: '1rem', padding: '1.5rem', maxWidth: 320, minWidth: 220, boxShadow: '0 2px 8px rgba(0,0,0,0.06)'}}>
+              <p style={{fontStyle: 'italic', color: '#333'}}>&ldquo;{t.feedback}&rdquo;</p>
+              <div style={{marginTop: '1rem', fontWeight: 700, color: '#0070f3'}}>- {t.name}</div>
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
-      {/* Related Services */}
-      <div className="mb-10">
-        <h2 className="text-xl font-bold-custom text-navy mb-3">Related Services</h2>
-        <div className="flex flex-wrap gap-4">
-          {data.related.map((service: { name: string; href: string }) => (
-            <Link key={service.href} href={service.href} className="bg-orange/90 text-navy font-bold-custom px-6 py-2 rounded-full shadow hover:bg-yellow transition text-sm md:text-base hover-raise hover-scale">
-              {service.name}
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
+      {/* CTA Section */}
+      <section className="cta-section">
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="cta-button">Talk to Expert on WhatsApp</a>
+        <CTAButton href="/contact">Contact Us</CTAButton>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="faq-preview-section">
+        <SectionHeader title="FAQs" />
+        <ul style={{maxWidth: 700, margin: '0 auto', textAlign: 'left', color: '#444'}}>
+          <li style={{marginBottom: '1.2rem'}}>
+            <strong>Q: What is attestation?</strong><br />
+            <span>A: Attestation is the process of verifying the authenticity of a document for use in another country.</span>
+          </li>
+          <li style={{marginBottom: '1.2rem'}}>
+            <strong>Q: How long does it take?</strong><br />
+            <span>A: Most attestation requests are completed within 5-10 business days.</span>
+          </li>
+        </ul>
+        <p style={{textAlign: 'center', marginTop: '1.5rem'}}>Still have questions? Visit our <Link href="/faq">FAQ</Link> page or <Link href="/contact">contact us</Link>.</p>
+      </section>
+    </main>
   );
 } 
