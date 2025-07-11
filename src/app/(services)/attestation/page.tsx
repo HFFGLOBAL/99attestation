@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AcademicCapIcon, IdentificationIcon, BriefcaseIcon, GlobeAltIcon, BuildingLibraryIcon } from '@heroicons/react/24/solid';
 
 export const metadata: Metadata = {
   title: "Document Attestation Services | Embassy Legalization | 99Attestation.com",
@@ -36,11 +37,11 @@ export const metadata: Metadata = {
 };
 
 const attestationTypes = [
-  { title: "Educational Attestation", desc: "Degree, diploma, and school certificates attested for study, work, or migration abroad. Includes HRD, MEA, embassy, and university verification." },
-  { title: "Personal Attestation", desc: "Birth, marriage, divorce, and personal documents attested for family, legal, or immigration purposes. Includes affidavits, medical, and police certificates." },
-  { title: "Commercial Attestation", desc: "Business, export, and company documents attested for international trade, business setup, and legal compliance. Includes power of attorney, invoices, and more." },
-  { title: "Apostille Services", desc: "Apostille for Hague Convention countries, making your documents valid internationally without further embassy legalization." },
-  { title: "Embassy Attestation", desc: "End-to-end embassy attestation for non-Hague countries, including UAE, Oman, Qatar, Kuwait, Saudi Arabia, and more." },
+  { title: "Educational Attestation", desc: "Degree, diploma, and school certificates attested for study, work, or migration abroad. Includes HRD, MEA, embassy, and university verification.", icon: <AcademicCapIcon className="w-10 h-10 text-orange mx-auto mb-2" /> },
+  { title: "Personal Attestation", desc: "Birth, marriage, divorce, and personal documents attested for family, legal, or immigration purposes. Includes affidavits, medical, and police certificates.", icon: <IdentificationIcon className="w-10 h-10 text-orange mx-auto mb-2" /> },
+  { title: "Commercial Attestation", desc: "Business, export, and company documents attested for international trade, business setup, and legal compliance. Includes power of attorney, invoices, and more.", icon: <BriefcaseIcon className="w-10 h-10 text-orange mx-auto mb-2" /> },
+  { title: "Apostille Services", desc: "Apostille for Hague Convention countries, making your documents valid internationally without further embassy legalization.", icon: <GlobeAltIcon className="w-10 h-10 text-orange mx-auto mb-2" /> },
+  { title: "Embassy Attestation", desc: "End-to-end embassy attestation for non-Hague countries, including UAE, Oman, Qatar, Kuwait, Saudi Arabia, and more.", icon: <BuildingLibraryIcon className="w-10 h-10 text-orange mx-auto mb-2" /> },
 ];
 
 const documentTypes = [
@@ -104,16 +105,15 @@ export default function AttestationPage() {
       </div>
 
       {/* Types of Attestation */}
-      <div className="mb-16">
-        <h2 className="text-2xl font-bold-custom text-navy mb-6 text-center">Types of Attestation</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-          {attestationTypes.map((type) => (
-            <div key={type.title} className="bg-cream rounded-xl p-6 shadow border border-yellow/30 text-center hover-raise transition">
-              <h3 className="text-xl font-bold-custom text-navy mb-2">{type.title}</h3>
-              <p className="text-navy text-base">{type.desc}</p>
-            </div>
-          ))}
-        </div>
+      <h2 className="text-2xl font-bold-custom text-navy mb-6 text-center">Types of Attestation</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-12">
+        {attestationTypes.map((type) => (
+          <div key={type.title} className="bg-cream rounded-xl p-6 shadow border border-yellow/30 text-center hover-raise transition group hover:border-orange hover:scale-105" style={{minHeight: '320px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start'}}>
+            {type.icon}
+            <h3 className="text-xl font-bold-custom text-navy mb-2 group-hover:text-orange transition">{type.title}</h3>
+            <p className="text-navy text-base">{type.desc}</p>
+          </div>
+        ))}
       </div>
 
       {/* Document Types */}

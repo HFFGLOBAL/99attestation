@@ -95,20 +95,20 @@ export default function Page() {
         <CTAButton href="/contact">Contact Us</CTAButton>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Section - Card Design */}
       <section className="faq-preview-section">
         <SectionHeader title="FAQs" />
-        <ul style={{maxWidth: 700, margin: '0 auto', textAlign: 'left', color: '#444'}}>
-          <li style={{marginBottom: '1.2rem'}}>
-            <strong>Q: What is attestation?</strong><br />
+        <div style={{maxWidth: 700, margin: '0 auto', textAlign: 'left', color: '#444', background: '#f7f7f7', borderRadius: '1rem', boxShadow: '0 2px 12px rgba(0,0,0,0.06)', padding: '2rem 1.5rem'}}>
+          <div style={{marginBottom: '1.8rem'}}>
+            <strong style={{color: '#003049'}}>Q: What is attestation?</strong><br />
             <span>A: Attestation is the process of verifying the authenticity of a document for use in another country.</span>
-          </li>
-          <li style={{marginBottom: '1.2rem'}}>
-            <strong>Q: How long does it take?</strong><br />
+          </div>
+          <div style={{marginBottom: '1.8rem'}}>
+            <strong style={{color: '#003049'}}>Q: How long does it take?</strong><br />
             <span>A: Most attestation requests are completed within 5-10 business days.</span>
-          </li>
-        </ul>
-        <p style={{textAlign: 'center', marginTop: '1.5rem'}}>Still have questions? Visit our <Link href="/faq">FAQ</Link> page or <Link href="/contact">contact us</Link>.</p>
+          </div>
+        </div>
+        <p style={{textAlign: 'center', marginTop: '1.5rem', color: '#003049', fontWeight: 500}}>Still have questions? <a href="/faq" style={{color: '#f77f00', textDecoration: 'underline'}}>Visit our FAQ page</a> or <a href="/contact" style={{color: '#f77f00', textDecoration: 'underline'}}>contact us</a>.</p>
       </section>
     </main>
   );

@@ -5,12 +5,15 @@ interface ServiceCardProps {
   title: string;
   description: string;
   href: string;
+  icon?: React.ReactNode;
+  colorClass?: string;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, href }) => (
-  <Link href={href} className="service-card">
+const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, href, icon, colorClass }) => (
+  <Link href={href} className="service-card group">
     <div>
-      <h3>{title}</h3>
+      {icon && <span className="mb-2 inline-block">{icon}</span>}
+      <h3 className={`font-bold-custom text-navy group-hover:text-orange transition ${colorClass || ''}`}>{title}</h3>
       <p>{description}</p>
       <span className="service-card-link">Learn more →</span>
     </div>

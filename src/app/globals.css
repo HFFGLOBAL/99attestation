@@ -146,7 +146,8 @@ body {
   transition: box-shadow 0.2s, transform 0.2s;
 }
 .service-card:hover {
-  box-shadow: 0 6px 32px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+  border: 1.5px solid var(--color-orange);
   transform: translateY(-4px) scale(1.03);
 }
 .service-card h3 {
@@ -154,6 +155,8 @@ body {
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  color: var(--color-navy) !important;
+  opacity: 1 !important;
 }
 .service-card p {
   color: #666;
