@@ -6,9 +6,9 @@ import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const branches = [
   { city: "Bangalore", phone: "9686924808" },
-  { city: "Chennai", phone: "9840123456" },
-  { city: "Hyderabad", phone: "9701234567" },
-  { city: "Delhi", phone: "9876543210" },
+  { city: "Chennai", phone: "+91-079934 72102" },
+  { city: "Hyderabad", phone: "+91-098865 81666" },
+  { city: "Delhi", phone: "9090556020" },
 ];
 
 export default function Header() {

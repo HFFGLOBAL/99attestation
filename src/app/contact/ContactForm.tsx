@@ -30,22 +30,22 @@ const branches = [
     map: "https://maps.google.com/?q=12.976793,77.606055",
   },
   {
-    city: "Chennai Branch",
-    phone: "9840123456",
-    address: "#12, 2nd Floor, Anna Salai, Chennai 600002",
-    map: "https://maps.google.com/?q=13.060422,80.249583",
+    city: "Hyderabad Branch",
+    phone: "+91-098865 81666",
+    address: "Plot No. 3-A, Savitri Ashirwad Building, Navodaya CO-OP, 1st Floor, Door No: 2, Banjara Hills Road No.3, Behind Times House, Hyderabad – 500034, Telangana, India",
+    map: "https://maps.google.com/?q=17.4205,78.4373",
   },
   {
-    city: "Hyderabad Branch",
-    phone: "9701234567",
-    address: "#8-2-293, Banjara Hills, Hyderabad 500034",
-    map: "https://maps.google.com/?q=17.4140,78.4346",
+    city: "Chennai Branch",
+    phone: "+91-079934 72102",
+    address: "No.609, Sundaram Avenue, 3rd Floor, Lakshmi Bhavan, Anna Salai, Chennai – 600006, Tamil Nadu, India",
+    map: "https://maps.google.com/?q=13.0606,80.2616",
   },
   {
     city: "Delhi Branch",
-    phone: "9876543210",
-    address: "#201, 2nd Floor, Connaught Place, New Delhi 110001",
-    map: "https://maps.google.com/?q=28.6315,77.2167",
+    phone: "9090556020",
+    address: "3066, Charke Walan Chowk, Chowri Bazar, Delhi 11006",
+    map: "https://maps.google.com/?q=28.6652,77.2301",
   },
 ];
 
