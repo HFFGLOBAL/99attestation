@@ -1,14 +1,45 @@
 import { CheckCircleIcon, ClockIcon, ShieldCheckIcon, CurrencyRupeeIcon, PhoneIcon, UserGroupIcon, GlobeAltIcon, DocumentCheckIcon, ArrowRightIcon, StarIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Link from "next/link";
+import { Breadcrumbs } from "./components/SectionHeader";
 
 export const metadata = {
   title: "99Attestation.com | Fast & Reliable Document Attestation Services",
   description: "Your trusted partner for attestation, apostille, embassy, and verification services. 15+ years experience, 10,000+ documents processed, 5000+ happy customers.",
+  openGraph: {
+    title: "99Attestation.com | Fast & Reliable Document Attestation Services",
+    description: "Your trusted partner for attestation, apostille, embassy, and verification services. 15+ years experience, 10,000+ documents processed, 5000+ happy customers.",
+    url: "https://99attestation.com/",
+    siteName: "99Attestation.com",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        width: 1200,
+        height: 630,
+        alt: "99Attestation - Global Attestation Services",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@99attestation",
+    title: "99Attestation.com | Fast & Reliable Document Attestation Services",
+    description: "Your trusted partner for attestation, apostille, embassy, and verification services. 15+ years experience, 10,000+ documents processed, 5000+ happy customers.",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        alt: "99Attestation - Global Attestation Services",
+      },
+    ],
+  },
 };
 
 export default function Home() {
   return (
     <>
+      <Breadcrumbs items={[{ label: "Home" }]} />
       {/* Hero Section */}
       <section className="relative bg-white pt-4 pb-12 px-4 sm:px-6 fade-in">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
@@ -17,7 +48,7 @@ export default function Home() {
             <p className="text-lg text-navy mb-6">99Attestation.com offers seamless, secure, and speedy attestation, apostille, and embassy services for all your documents. Experience global reach, transparent pricing, and dedicated support.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-6">
               <a href="https://wa.me/919686924808" target="_blank" rel="noopener noreferrer" className="bg-orange text-navy px-6 py-3 rounded-full font-bold-custom hover:bg-yellow transition text-lg">Talk to Experts</a>
-              <a href="/services" className="border border-navy text-navy px-6 py-3 rounded-full font-bold-custom hover:bg-navy hover:text-cream transition text-lg flex items-center gap-2">Explore Services <ArrowRightIcon className="w-5 h-5" /></a>
+              <Link href="/services" className="border border-navy text-navy px-6 py-3 rounded-full font-bold-custom hover:bg-navy hover:text-cream transition text-lg flex items-center gap-2">Explore Services <ArrowRightIcon className="w-5 h-5" /></Link>
             </div>
             {/* Trust Signals */}
             <div className="flex flex-wrap gap-6 justify-center md:justify-start mt-8">
@@ -56,25 +87,25 @@ export default function Home() {
               <h3 className="font-bold-custom text-orange mb-2">Apostille Countries</h3>
               <div className="flex flex-wrap gap-3">
                 {/* Placeholder flags, replace with actual flag images */}
-                <CountryFlag name="USA" />
-                <CountryFlag name="UK" />
-                <CountryFlag name="Australia" />
-                <CountryFlag name="Italy" />
-                <CountryFlag name="Germany" />
-                <CountryFlag name="France" />
-                <CountryFlag name="Netherlands" />
+                <CountryFlag name="USA" href="/(services)/apostille/usa" />
+                <CountryFlag name="UK" href="/(services)/apostille/uk" />
+                <CountryFlag name="Australia" href="/(services)/apostille/australia" />
+                <CountryFlag name="Italy" href="/(services)/apostille/italy" />
+                <CountryFlag name="Germany" href="/(services)/apostille/germany" />
+                <CountryFlag name="France" href="/(services)/apostille/france" />
+                <CountryFlag name="Netherlands" href="/(services)/apostille/netherlands" />
               </div>
             </div>
             <div className="flex-1">
               <h3 className="font-bold-custom text-orange mb-2">Embassy Attestation Countries</h3>
               <div className="flex flex-wrap gap-3">
-                <CountryFlag name="UAE" />
-                <CountryFlag name="Saudi Arabia" />
-                <CountryFlag name="Qatar" />
-                <CountryFlag name="Kuwait" />
-                <CountryFlag name="Oman" />
-                <CountryFlag name="Bahrain" />
-                <CountryFlag name="Egypt" />
+                <CountryFlag name="UAE" href="/(services)/attestation/uae" />
+                <CountryFlag name="Saudi Arabia" href="/(services)/attestation/saudi-arabia" />
+                <CountryFlag name="Qatar" href="/(services)/attestation/qatar" />
+                <CountryFlag name="Kuwait" href="/(services)/attestation/kuwait" />
+                <CountryFlag name="Oman" href="/(services)/attestation/oman" />
+                <CountryFlag name="Bahrain" href="/(services)/attestation/bahrain" />
+                <CountryFlag name="Egypt" href="/(services)/attestation/egypt" />
               </div>
             </div>
           </div>
@@ -146,11 +177,27 @@ export default function Home() {
           <h2 className="text-3xl font-bold-custom mb-4">Ready to Get Your Documents Attested?</h2>
           <p className="mb-8 text-lg">Experience seamless, fast, and reliable attestation services with 99Attestation.com.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/get-quote" className="bg-yellow text-navy px-6 py-3 rounded-full font-bold-custom hover:bg-orange transition text-lg scale-in">Get Your Free Quote Now</a>
-            <a href="/contact" className="border border-cream px-6 py-3 rounded-full font-bold-custom hover:bg-orange hover:text-navy transition text-lg scale-in">Contact Our Experts</a>
+            <a href="https://wa.me/919686924808" className="bg-yellow text-navy px-6 py-3 rounded-full font-bold-custom hover:bg-orange transition text-lg scale-in">Talk to Experts / Free Consultation</a>
           </div>
         </div>
       </section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "99Attestation.com",
+            "url": "https://99attestation.com/",
+            "logo": "/hero-world-map.png",
+            "sameAs": [
+              "https://www.facebook.com/99attestation",
+              "https://twitter.com/99attestation"
+            ],
+            "description": "Your trusted partner for attestation, apostille, embassy, and verification services. 15+ years experience, 10,000+ documents processed, 5000+ happy customers."
+          })
+        }}
+      />
     </>
   );
 }
@@ -158,8 +205,18 @@ export default function Home() {
 // --- Reusable Section Components ---
 
 function ServiceCard({ icon, title, desc, href }: { icon: React.ReactNode; title: string; desc: string; href: string }) {
+  // Map service titles to new routes if needed
+  const serviceRoutes: Record<string, string> = {
+    "Educational Attestation": "/(services)/educational-attestation",
+    "Personal Attestation": "/(services)/personal-attestation",
+    "Commercial Attestation": "/(services)/commercial-attestation",
+    "Apostille Services": "/(services)/apostille",
+    "MEA & Embassy Attestation": "/(services)/mea-attestation",
+    "PCC & WES Verification": "/(services)/pcc",
+  };
+  const newHref = serviceRoutes[title] || href;
   return (
-    <a href={href} className="group bg-white border border-yellow rounded-xl p-6 flex flex-col items-center text-center shadow hover:shadow-lg transition slide-up">
+    <a href={newHref} className="group bg-white border border-yellow rounded-xl p-6 flex flex-col items-center text-center shadow hover:shadow-lg transition slide-up">
       <div className="mb-3">{icon}</div>
       <h3 className="font-bold-custom text-lg text-navy mb-1">{title}</h3>
       <p className="text-navy text-sm mb-3">{desc}</p>
@@ -188,16 +245,16 @@ function ProcessStep({ icon, title, desc }: { icon: React.ReactNode; title: stri
   );
 }
 
-function CountryFlag({ name }: { name: string }) {
+function CountryFlag({ name, href }: { name: string; href: string }) {
   // Placeholder: Use emoji flags or replace with actual flag images
   const flagEmojis: Record<string, string> = {
     USA: "🇺🇸", UK: "🇬🇧", Australia: "🇦🇺", Italy: "🇮🇹", Germany: "🇩🇪", France: "🇫🇷", Netherlands: "🇳🇱",
     UAE: "🇦🇪", "Saudi Arabia": "🇸🇦", Qatar: "🇶🇦", Kuwait: "🇰🇼", Oman: "🇴🇲", Bahrain: "🇧🇭", Egypt: "🇪🇬",
   };
   return (
-    <span className="flex items-center gap-2 bg-cream border border-yellow rounded-full px-3 py-1 text-sm shadow slide-up">
+    <a href={href} className="flex items-center gap-2 bg-cream border border-yellow rounded-full px-3 py-1 text-sm shadow slide-up hover:bg-yellow transition">
       <span className="text-xl">{flagEmojis[name] || "🏳️"}</span> <span className="text-navy font-bold-custom">{name}</span>
-    </span>
+    </a>
   );
 }
 

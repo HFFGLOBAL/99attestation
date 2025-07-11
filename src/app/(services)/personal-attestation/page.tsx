@@ -2,6 +2,7 @@ import SectionHeader from '../../components/SectionHeader';
 import CTAButton from '../../components/CTAButton';
 import ServiceCard from '../../components/ServiceCard';
 import Link from 'next/link';
+import type { Metadata } from "next";
 
 const content = {
   title: "Personal Attestation",
@@ -32,6 +33,19 @@ const content = {
     { q: "How long does it take?", a: "Most personal attestations are completed within 7-15 business days." },
     { q: "Is my data safe?", a: "Yes, we use secure processes and never share your documents without consent." }
   ]
+};
+
+export const metadata: Metadata = {
+  title: "Personal Attestation | 99Attestation",
+  description: "Attest your birth, marriage, divorce, and other personal documents for family, legal, or immigration purposes.",
+  keywords: ["Personal Attestation", "Birth Certificate", "Marriage Certificate", "Divorce Certificate", "Immigration", "99Attestation"],
+  openGraph: {
+    title: "Personal Attestation | 99Attestation",
+    description: "Attest your birth, marriage, divorce, and other personal documents for family, legal, or immigration purposes.",
+    url: "https://99attestation.com/services/personal-attestation",
+    siteName: "99Attestation",
+    type: "website"
+  }
 };
 
 export default function PersonalAttestationPage() {
@@ -96,4 +110,4 @@ export default function PersonalAttestationPage() {
       )}
     </main>
   );
-} 
+}

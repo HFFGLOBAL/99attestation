@@ -2,6 +2,20 @@ import SectionHeader from '../../components/SectionHeader';
 import CTAButton from '../../components/CTAButton';
 import ServiceCard from '../../components/ServiceCard';
 import Link from 'next/link';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Commercial Attestation | 99Attestation",
+  description: "Attest your business, export, and company documents for international trade, business setup, and legal compliance.",
+  keywords: ["Commercial Attestation", "Business Attestation", "Export Documents", "Company Documents", "International Trade", "99Attestation"],
+  openGraph: {
+    title: "Commercial Attestation | 99Attestation",
+    description: "Attest your business, export, and company documents for international trade, business setup, and legal compliance.",
+    url: "https://99attestation.com/services/commercial-attestation",
+    siteName: "99Attestation",
+    type: "website"
+  }
+};
 
 const content = {
   title: "Commercial Attestation",
@@ -96,4 +110,4 @@ export default function CommercialAttestationPage() {
       )}
     </main>
   );
-} 
+}

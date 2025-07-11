@@ -2,6 +2,7 @@ import SectionHeader from '../../components/SectionHeader';
 import CTAButton from '../../components/CTAButton';
 import ServiceCard from '../../components/ServiceCard';
 import Link from 'next/link';
+import type { Metadata } from "next";
 
 const content = {
   title: "Police Clearance Certificate (PCC)",
@@ -29,6 +30,19 @@ const content = {
     { q: "What is PCC attestation?", a: "It is the process of verifying your Police Clearance Certificate for use in foreign countries." },
     { q: "Is PCC attestation mandatory?", a: "Yes, for migration, employment, and long-term visas, PCC attestation is required." }
   ]
+};
+
+export const metadata: Metadata = {
+  title: "Police Clearance Certificate (PCC) Attestation | 99Attestation",
+  description: "Get your Police Clearance Certificate attested for use abroad. Fast, secure, and accepted internationally.",
+  keywords: ["PCC Attestation", "Police Clearance Certificate", "Migration", "Employment", "Visa", "99Attestation"],
+  openGraph: {
+    title: "Police Clearance Certificate (PCC) Attestation | 99Attestation",
+    description: "Get your Police Clearance Certificate attested for use abroad. Fast, secure, and accepted internationally.",
+    url: "https://99attestation.com/services/pcc",
+    siteName: "99Attestation",
+    type: "website"
+  }
 };
 
 export default function PCCPage() {
@@ -93,4 +107,4 @@ export default function PCCPage() {
       )}
     </main>
   );
-} 
+}

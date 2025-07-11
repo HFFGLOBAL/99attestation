@@ -2,6 +2,7 @@ import SectionHeader from '../../components/SectionHeader';
 import CTAButton from '../../components/CTAButton';
 import ServiceCard from '../../components/ServiceCard';
 import Link from 'next/link';
+import type { Metadata } from "next";
 
 const content = {
   title: "HRD Attestation",
@@ -29,6 +30,19 @@ const content = {
     { q: "What is HRD attestation?", a: "It is the authentication of educational documents by the Human Resource Department of the state." },
     { q: "Is HRD attestation mandatory?", a: "Yes, for most countries, HRD attestation is required before MEA and embassy attestation." }
   ]
+};
+
+export const metadata: Metadata = {
+  title: "HRD Attestation | 99Attestation",
+  description: "Get your educational documents attested by the Human Resource Department (HRD) for use abroad.",
+  keywords: ["HRD Attestation", "Human Resource Department", "Educational Documents", "Attestation", "99Attestation"],
+  openGraph: {
+    title: "HRD Attestation | 99Attestation",
+    description: "Get your educational documents attested by the Human Resource Department (HRD) for use abroad.",
+    url: "https://99attestation.com/services/hrd-attestation",
+    siteName: "99Attestation",
+    type: "website"
+  }
 };
 
 export default function HRDAttestationPage() {
@@ -93,4 +107,4 @@ export default function HRDAttestationPage() {
       )}
     </main>
   );
-} 
+}

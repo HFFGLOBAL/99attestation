@@ -2,6 +2,7 @@ import SectionHeader from '../../components/SectionHeader';
 import CTAButton from '../../components/CTAButton';
 import ServiceCard from '../../components/ServiceCard';
 import Link from 'next/link';
+import type { Metadata } from "next";
 
 const content = {
   title: "MEA Attestation",
@@ -29,6 +30,19 @@ const content = {
     { q: "What is MEA attestation?", a: "It is the authentication of documents by the Ministry of External Affairs, Government of India." },
     { q: "Is MEA attestation mandatory?", a: "Yes, for all documents to be used abroad, MEA attestation is required." }
   ]
+};
+
+export const metadata: Metadata = {
+  title: "MEA Attestation | 99Attestation",
+  description: "Get your documents attested by the Ministry of External Affairs (MEA) for international use.",
+  keywords: ["MEA Attestation", "Ministry of External Affairs", "Document Attestation", "International", "99Attestation"],
+  openGraph: {
+    title: "MEA Attestation | 99Attestation",
+    description: "Get your documents attested by the Ministry of External Affairs (MEA) for international use.",
+    url: "https://99attestation.com/services/mea-attestation",
+    siteName: "99Attestation",
+    type: "website"
+  }
 };
 
 export default function MEAAttestationPage() {
@@ -93,4 +107,4 @@ export default function MEAAttestationPage() {
       )}
     </main>
   );
-} 
+}

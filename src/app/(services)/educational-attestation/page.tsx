@@ -2,6 +2,7 @@ import SectionHeader from '../../components/SectionHeader';
 import CTAButton from '../../components/CTAButton';
 import ServiceCard from '../../components/ServiceCard';
 import Link from 'next/link';
+import type { Metadata } from "next";
 
 const content = {
   title: "Educational Attestation",
@@ -32,6 +33,19 @@ const content = {
     { q: "How long does it take?", a: "Most educational attestations are completed within 7-15 business days." },
     { q: "Is my data safe?", a: "Yes, we use secure processes and never share your documents without consent." }
   ]
+};
+
+export const metadata: Metadata = {
+  title: "Educational Attestation | 99Attestation",
+  description: "Attest your degree, diploma, and academic certificates for study, work, or migration abroad. Fast, secure, and accepted in 100+ countries.",
+  keywords: ["Educational Attestation", "Degree Attestation", "Diploma Attestation", "Academic Certificates", "Study Abroad", "99Attestation"],
+  openGraph: {
+    title: "Educational Attestation | 99Attestation",
+    description: "Attest your degree, diploma, and academic certificates for study, work, or migration abroad. Fast, secure, and accepted in 100+ countries.",
+    url: "https://99attestation.com/services/educational-attestation",
+    siteName: "99Attestation",
+    type: "website"
+  }
 };
 
 export default function EducationalAttestationPage() {
@@ -96,4 +110,4 @@ export default function EducationalAttestationPage() {
       )}
     </main>
   );
-} 
+}

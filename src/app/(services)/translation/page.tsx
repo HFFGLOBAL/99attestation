@@ -2,6 +2,7 @@ import SectionHeader from '../../components/SectionHeader';
 import CTAButton from '../../components/CTAButton';
 import ServiceCard from '../../components/ServiceCard';
 import Link from 'next/link';
+import type { Metadata } from "next";
 
 const content = {
   title: "Translation",
@@ -29,6 +30,19 @@ const content = {
     { q: "Are your translations certified?", a: "Yes, all translations are certified and accepted by embassies, universities, and government authorities." },
     { q: "How long does translation take?", a: "Most translations are completed within 2-5 business days, depending on document type and language." }
   ]
+};
+
+export const metadata: Metadata = {
+  title: "Translation Services | 99Attestation",
+  description: "Professional translation services for all your documents. Fast, accurate, and accepted worldwide.",
+  keywords: ["Translation", "Certified Translation", "Document Translation", "Embassy", "University", "99Attestation"],
+  openGraph: {
+    title: "Translation Services | 99Attestation",
+    description: "Professional translation services for all your documents. Fast, accurate, and accepted worldwide.",
+    url: "https://99attestation.com/services/translation",
+    siteName: "99Attestation",
+    type: "website"
+  }
 };
 
 export default function TranslationPage() {
@@ -93,4 +107,4 @@ export default function TranslationPage() {
       )}
     </main>
   );
-} 
+}

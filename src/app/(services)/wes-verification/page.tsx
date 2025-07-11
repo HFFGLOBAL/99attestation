@@ -2,6 +2,7 @@ import SectionHeader from '../../components/SectionHeader';
 import CTAButton from '../../components/CTAButton';
 import ServiceCard from '../../components/ServiceCard';
 import Link from 'next/link';
+import type { Metadata } from "next";
 
 const content = {
   title: "WES Verification",
@@ -29,6 +30,19 @@ const content = {
     { q: "What is WES verification?", a: "It is the process of authenticating your academic documents for evaluation by World Education Services." },
     { q: "Is WES verification mandatory?", a: "Yes, for immigration, study, or work in Canada/USA, WES verification is often required." }
   ]
+};
+
+export const metadata: Metadata = {
+  title: "WES Verification | 99Attestation",
+  description: "Get your documents verified for WES (World Education Services) evaluation. Fast, secure, and accepted internationally.",
+  keywords: ["WES Verification", "Document Verification", "Canada", "USA", "World Education Services", "99Attestation"],
+  openGraph: {
+    title: "WES Verification | 99Attestation",
+    description: "Get your documents verified for WES (World Education Services) evaluation. Fast, secure, and accepted internationally.",
+    url: "https://99attestation.com/services/wes-verification",
+    siteName: "99Attestation",
+    type: "website"
+  }
 };
 
 export default function WESVerificationPage() {
@@ -93,4 +107,4 @@ export default function WESVerificationPage() {
       )}
     </main>
   );
-} 
+}

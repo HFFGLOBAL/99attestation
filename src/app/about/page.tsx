@@ -4,6 +4,34 @@ export const metadata: Metadata = {
   title: "About Us | 99Attestation",
   description: "Learn about 99Attestation, our mission, vision, and why we are your trusted partner for document attestation and apostille services.",
   keywords: ["about", "about 99attestation", "company info", "attestation", "apostille"],
+  openGraph: {
+    title: "About Us | 99Attestation",
+    description: "Learn about 99Attestation, our mission, vision, and why we are your trusted partner for document attestation and apostille services.",
+    url: "https://99attestation.com/about",
+    siteName: "99Attestation.com",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        width: 1200,
+        height: 630,
+        alt: "99Attestation - Global Attestation Services",
+      },
+    ],
+    locale: "en_US",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@99attestation",
+    title: "About Us | 99Attestation",
+    description: "Learn about 99Attestation, our mission, vision, and why we are your trusted partner for document attestation and apostille services.",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        alt: "99Attestation - Global Attestation Services",
+      },
+    ],
+  },
 };
 
 
@@ -122,9 +150,9 @@ export default function AboutPage() {
       {/* CTA Section */}
       <div className="relative flex flex-col items-center justify-center py-16 px-6 md:px-16 text-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-200/80 via-yellow/60 to-orange-300/80 blur-2xl opacity-80 -z-10" />
-        <div className="relative bg-white/70 border border-yellow/30 rounded-3xl shadow-2xl backdrop-blur-xl p-10 md:p-16 max-w-3xl w-full mx-auto animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-xl tracking-tight">Ready to Get Started?</h2>
-          <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto">Experience seamless, fast, and reliable attestation services with <span className='font-bold text-orange'>99Attestation.com</span>. Connect with our team instantly on WhatsApp or reach out via our contact form for personalized assistance.</p>
+        <div className="relative bg-white/90 border border-yellow/40 rounded-3xl shadow-2xl backdrop-blur-xl p-10 md:p-16 max-w-3xl w-full mx-auto animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-navy drop-shadow-lg tracking-tight">Ready to Get Started?</h2>
+          <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-navy font-medium">Experience seamless, fast, and reliable attestation services with <span className='font-bold text-orange'>99Attestation.com</span>. Connect with our team instantly on WhatsApp or reach out via our contact form for personalized assistance.</p>
           <div className="flex flex-col sm:flex-row gap-5 justify-center">
             <a
               href="https://wa.me/919686924808"
@@ -144,6 +172,23 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "99Attestation.com",
+            "url": "https://99attestation.com/about",
+            "logo": "/hero-world-map.png",
+            "sameAs": [
+              "https://www.facebook.com/99attestation",
+              "https://twitter.com/99attestation"
+            ],
+            "description": "Learn about 99Attestation, our mission, vision, and why we are your trusted partner for document attestation and apostille services."
+          })
+        }}
+      />
     </section>
 
     

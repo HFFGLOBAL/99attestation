@@ -3,8 +3,36 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact Us | 99Attestation",
-  description: "Fast, reliable, and secure attestation services for all your documents. Serving UAE, Oman, USA, UK, Canada, and more.",
-  keywords: ["attestation", "document attestation", "UAE attestation", "Oman attestation", "apostille", "99attestation"],
+  description: "Contact 99Attestation for fast, reliable attestation, apostille, and document services. Reach us by phone, WhatsApp, or our online form.",
+  keywords: ["contact", "contact 99attestation", "attestation help", "apostille support"],
+  openGraph: {
+    title: "Contact Us | 99Attestation",
+    description: "Contact 99Attestation for fast, reliable attestation, apostille, and document services. Reach us by phone, WhatsApp, or our online form.",
+    url: "https://99attestation.com/contact",
+    siteName: "99Attestation.com",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        width: 1200,
+        height: 630,
+        alt: "99Attestation - Global Attestation Services",
+      },
+    ],
+    locale: "en_US",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@99attestation",
+    title: "Contact Us | 99Attestation",
+    description: "Contact 99Attestation for fast, reliable attestation, apostille, and document services. Reach us by phone, WhatsApp, or our online form.",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        alt: "99Attestation - Global Attestation Services",
+      },
+    ],
+  },
 };
 
 export default function ContactPage() {
@@ -21,6 +49,18 @@ export default function ContactPage() {
       </div>
       {/* Main Content */}
       <ContactForm />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact Us | 99Attestation",
+            "url": "https://99attestation.com/contact",
+            "description": "Contact 99Attestation for fast, reliable attestation, apostille, and document services. Reach us by phone, WhatsApp, or our online form."
+          })
+        }}
+      />
     </section>
   );
 } 
