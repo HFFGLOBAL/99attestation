@@ -5,10 +5,10 @@ import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const branches = [
-  { city: "Bangalore", phone: "9686924808" },
-  { city: "Chennai", phone: "+91-079934 72102" },
-  { city: "Hyderabad", phone: "+91-098865 81666" },
-  { city: "Delhi", phone: "9090556020" },
+  { city: "Bangalore", phone: "+91-9686924808" },
+  { city: "Chennai", phone: "+91-7993472102" },
+  { city: "Hyderabad", phone: "+91-9886581666" },
+  { city: "Delhi", phone: "+91-9090556020" },
 ];
 
 export default function Header() {
@@ -24,7 +24,7 @@ export default function Header() {
           <div className="flex flex-wrap items-center gap-3 md:gap-3">
             <span className="flex items-center gap-1 md:hidden">
               <PhoneIcon className="w-4 h-4" />
-              <a href="tel:9686924808" className="hover:underline text-cream font-bold-custom">9686924808</a>
+              <a href="tel:+91-9686924808" className="hover:underline text-cream font-bold-custom">+91-9686924808</a>
             </span>
             <span className="flex items-center gap-1 md:hidden">
               <EnvelopeIcon className="w-4 h-4" />

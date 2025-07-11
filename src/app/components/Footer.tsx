@@ -11,7 +11,7 @@ const services = [
   { name: "MEA Attestation", href: "/services/mea" },
   { name: "PCC", href: "/services/pcc" },
   { name: "WES Verification", href: "/services/wes-verification" },
-  { name: "Translation", href: "/services/translation" },
+ 
 ];
 
 export default function Footer() {

@@ -47,7 +47,7 @@ export default function Home() {
             <p className="text-lg text-navy mb-6">99Attestation.com offers seamless, secure, and speedy attestation, apostille, and embassy services for all your documents. Experience global reach, transparent pricing, and dedicated support.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-6">
               <a href="https://wa.me/919686924808" target="_blank" rel="noopener noreferrer" className="bg-orange text-navy px-6 py-3 rounded-full font-bold-custom hover:bg-yellow transition text-lg">Talk to Experts</a>
-              <Link href="/services" className="border border-navy text-navy px-6 py-3 rounded-full font-bold-custom hover:bg-navy hover:text-cream transition text-lg flex items-center gap-2">Explore Services <ArrowRightIcon className="w-5 h-5" /></Link>
+              <Link href="#services" className="border border-navy text-navy px-6 py-3 rounded-full font-bold-custom hover:bg-navy hover:text-cream transition text-lg flex items-center gap-2">Explore Services <ArrowRightIcon className="w-5 h-5" /></Link>
             </div>
             {/* Trust Signals */}
             <div className="flex flex-wrap gap-6 justify-center md:justify-start mt-8">
@@ -112,7 +112,7 @@ export default function Home() {
       </section>
 
       {/* Services Overview Section */}
-      <section className="py-16 bg-cream px-4 sm:px-8">
+      <section id="services" className="py-16 bg-cream px-4 sm:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold-custom text-navy mb-4 text-center fade-in">Our Comprehensive Attestation Services</h2>
           <p className="text-navy text-center mb-10">We offer a full range of attestation, apostille, and verification services for all document types.</p>
