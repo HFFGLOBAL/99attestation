@@ -10,7 +10,6 @@ const staticRoutes = [
   '/privacy-policy',
   '/get-quote',
   '/how-it-works',
-  '/countries',
   '/services',
   '/apostille',
   '/attestation',
@@ -36,7 +35,6 @@ export async function GET() {
 
   // Dynamic country pages
   countryCodes.forEach((code) => {
-    urls.push(`<url><loc>${baseUrl}/countries/${code}</loc></url>`);
     urls.push(`<url><loc>${baseUrl}/attestation/${code}</loc></url>`);
     urls.push(`<url><loc>${baseUrl}/apostille/${code}</loc></url>`);
   });

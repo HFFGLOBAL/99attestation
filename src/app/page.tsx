@@ -39,7 +39,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <Breadcrumbs items={[{ label: "Home" }]} />
+      
       {/* Hero Section */}
       <section className="relative bg-white pt-4 pb-12 px-4 sm:px-6 fade-in">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
@@ -87,25 +87,25 @@ export default function Home() {
               <h3 className="font-bold-custom text-orange mb-2">Apostille Countries</h3>
               <div className="flex flex-wrap gap-3">
                 {/* Placeholder flags, replace with actual flag images */}
-                <CountryFlag name="USA" href="/(services)/apostille/usa" />
-                <CountryFlag name="UK" href="/(services)/apostille/uk" />
-                <CountryFlag name="Australia" href="/(services)/apostille/australia" />
-                <CountryFlag name="Italy" href="/(services)/apostille/italy" />
-                <CountryFlag name="Germany" href="/(services)/apostille/germany" />
-                <CountryFlag name="France" href="/(services)/apostille/france" />
-                <CountryFlag name="Netherlands" href="/(services)/apostille/netherlands" />
+                <CountryFlag name="USA" href="/services/apostille/usa" />
+                <CountryFlag name="UK" href="/services/apostille/uk" />
+                <CountryFlag name="Australia" href="/services/apostille/australia" />
+                <CountryFlag name="Italy" href="/services/apostille/italy" />
+                <CountryFlag name="Germany" href="/services/apostille/germany" />
+                <CountryFlag name="France" href="/services/apostille/france" />
+                <CountryFlag name="Netherlands" href="/services/apostille/netherlands" />
               </div>
             </div>
             <div className="flex-1">
               <h3 className="font-bold-custom text-orange mb-2">Embassy Attestation Countries</h3>
               <div className="flex flex-wrap gap-3">
-                <CountryFlag name="UAE" href="/(services)/attestation/uae" />
-                <CountryFlag name="Saudi Arabia" href="/(services)/attestation/saudi-arabia" />
-                <CountryFlag name="Qatar" href="/(services)/attestation/qatar" />
-                <CountryFlag name="Kuwait" href="/(services)/attestation/kuwait" />
-                <CountryFlag name="Oman" href="/(services)/attestation/oman" />
-                <CountryFlag name="Bahrain" href="/(services)/attestation/bahrain" />
-                <CountryFlag name="Egypt" href="/(services)/attestation/egypt" />
+                <CountryFlag name="UAE" href="/services/attestation/uae" />
+                <CountryFlag name="Saudi Arabia" href="/services/attestation/saudi-arabia" />
+                <CountryFlag name="Qatar" href="/services/attestation/qatar" />
+                <CountryFlag name="Kuwait" href="/services/attestation/kuwait" />
+                <CountryFlag name="Oman" href="/services/attestation/oman" />
+                <CountryFlag name="Bahrain" href="/services/attestation/bahrain" />
+                <CountryFlag name="Egypt" href="/services/attestation/egypt" />
               </div>
             </div>
           </div>
@@ -207,12 +207,12 @@ export default function Home() {
 function ServiceCard({ icon, title, desc, href }: { icon: React.ReactNode; title: string; desc: string; href: string }) {
   // Map service titles to new routes if needed
   const serviceRoutes: Record<string, string> = {
-    "Educational Attestation": "/(services)/educational-attestation",
-    "Personal Attestation": "/(services)/personal-attestation",
-    "Commercial Attestation": "/(services)/commercial-attestation",
-    "Apostille Services": "/(services)/apostille",
-    "MEA & Embassy Attestation": "/(services)/mea-attestation",
-    "PCC & WES Verification": "/(services)/pcc",
+    "Educational Attestation": "/services/educational-attestation",
+    "Personal Attestation": "/services/personal-attestation",
+    "Commercial Attestation": "/services/commercial-attestation",
+    "Apostille Services": "/services/apostille",
+    "MEA & Embassy Attestation": "/services/mea-attestation",
+    "PCC & WES Verification": "/services/pcc",
   };
   const newHref = serviceRoutes[title] || href;
   return (

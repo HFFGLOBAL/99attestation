@@ -156,7 +156,6 @@ export default function ApostillePage() {
             </Link>
           ))}
         </div>
-        <p className="text-center text-navy mt-4">We serve all Hague Convention countries. <Link href="/countries" className="text-orange font-bold-custom hover-underline">See all countries</Link></p>
       </div>
 
       {/* Why Choose Us */}

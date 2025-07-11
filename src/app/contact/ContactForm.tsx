@@ -3,22 +3,23 @@ import { useState } from "react";
 import { FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 
-const serviceKeywords = [
-  { label: "Educational Attestation", href: "/services/educational-attestation" },
-  { label: "Personal Attestation", href: "/services/personal-attestation" },
-  { label: "Commercial Attestation", href: "/services/commercial-attestation" },
-  { label: "Apostille", href: "/services/apostille" },
-  { label: "HRD Attestation", href: "/services/hrd" },
-  { label: "MEA Attestation", href: "/services/mea" },
-  { label: "PCC", href: "/services/pcc" },
-  { label: "WES Verification", href: "/services/wes-verification" },
-  { label: "Translation", href: "/services/translation" },
-  { label: "Embassy Attestation", href: "/services/embassy-attestation" },
-  { label: "Degree Attestation", href: "/services/degree-attestation" },
-  { label: "Birth Certificate Attestation", href: "/services/birth-certificate-attestation" },
-  { label: "Marriage Certificate Attestation", href: "/services/marriage-certificate-attestation" },
-  { label: "Document Verification", href: "/services/document-verification" },
-  { label: "Notary Services", href: "/services/notary" },
+const services = [
+  "Educational Attestation",
+  "Personal Attestation",
+  "Commercial Attestation",
+  "Apostille",
+  "Embassy Attestation",
+  "PCC/WES Verification",
+  "Translation",
+  "Other",
+];
+
+const countryList = [
+  "UAE", "Saudi Arabia", "Qatar", "Kuwait", "Oman", "Bahrain", "Egypt", "USA", "UK", "Australia", "Italy", "Germany", "France", "Netherlands"
+];
+
+const documentTypes = [
+  "Educational", "Personal", "Commercial", "Other"
 ];
 
 const branches = [
@@ -50,7 +51,15 @@ const branches = [
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "", reason: "Service Inquiry" });
+  const [form, setForm] = useState({
+    service: "",
+    country: "",
+    documentType: "",
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -61,6 +70,10 @@ export default function ContactForm() {
     setTimeout(() => setSubmitted(false), 4000);
   }
 
+  // Service-specific logic
+  const isCountrySpecific = ["Apostille", "Embassy Attestation"].includes(form.service);
+  const isDocTypeNeeded = ["Apostille", "Educational Attestation", "Personal Attestation", "Commercial Attestation", "Embassy Attestation"].includes(form.service);
+
   return (
     <div className="relative z-10 w-full max-w-7xl mx-auto pb-10 px-4">
       <div className="flex flex-col md:flex-row gap-12 items-start">
@@ -69,30 +82,51 @@ export default function ContactForm() {
           <h2 className="text-3xl font-bold-custom text-navy mb-6">Send Us a Message</h2>
           <form onSubmit={handleSubmit} className="flex flex-col gap-7">
             <div className="flex flex-col gap-6">
+              {/* Service Selection */}
+              <div className="relative">
+                <select id="service" name="service" required value={form.service} onChange={handleChange} className="peer px-5 py-3 rounded-xl border border-yellow/40 focus:outline-none focus:ring-2 focus:ring-orange/70 bg-cream/80 text-navy transition w-full">
+                  <option value="" disabled>Select Service *</option>
+                  {services.map((s) => <option key={s} value={s}>{s}</option>)}
+                </select>
+                <label htmlFor="service" className="absolute left-5 -top-5 text-xs text-orange bg-white/80 px-1">Service Interested In *</label>
+              </div>
+              {/* Country Selection (always visible) */}
+              <div className="relative">
+                <select id="country" name="country" required value={form.country} onChange={handleChange} className="peer px-5 py-3 rounded-xl border border-yellow/40 focus:outline-none focus:ring-2 focus:ring-orange/70 bg-cream/80 text-navy transition w-full">
+                  <option value="" disabled>Select Country *</option>
+                  {countryList.map((c) => <option key={c} value={c}>{c}</option>)}
+                </select>
+                <label htmlFor="country" className="absolute left-5 -top-5 text-xs text-orange bg-white/80 px-1">Country *</label>
+              </div>
+              {/* Document Type (conditional) */}
+              {isDocTypeNeeded && (
+                <div className="relative">
+                  <select id="documentType" name="documentType" required value={form.documentType} onChange={handleChange} className="peer px-5 py-3 rounded-xl border border-yellow/40 focus:outline-none focus:ring-2 focus:ring-orange/70 bg-cream/80 text-navy transition w-full">
+                    <option value="" disabled>Select Document Type *</option>
+                    {documentTypes.map((d) => <option key={d} value={d}>{d}</option>)}
+                  </select>
+                  <label htmlFor="documentType" className="absolute left-5 -top-5 text-xs text-orange bg-white/80 px-1">Document Type *</label>
+                </div>
+              )}
+              {/* Name */}
               <div className="relative">
                 <input id="name" name="name" type="text" required value={form.name} onChange={handleChange} className="peer px-5 py-3 rounded-xl border border-yellow/40 focus:outline-none focus:ring-2 focus:ring-orange/70 bg-cream/80 text-navy placeholder-transparent transition w-full" placeholder="Your Name" />
-                <label htmlFor="name" className="absolute left-5 top-3 text-navy/60 bg-white/80 px-1 transition-all duration-200 pointer-events-none peer-focus:-top-5 peer-focus:text-xs peer-focus:text-orange peer-valid:-top-5 peer-valid:text-xs">Name</label>
+                <label htmlFor="name" className="absolute left-5 top-3 text-navy/60 bg-white/80 px-1 transition-all duration-200 pointer-events-none peer-focus:-top-5 peer-focus:text-xs peer-focus:text-orange peer-valid:-top-5 peer-valid:text-xs">Name *</label>
               </div>
+              {/* Email */}
               <div className="relative">
                 <input id="email" name="email" type="email" required value={form.email} onChange={handleChange} className="peer px-5 py-3 rounded-xl border border-yellow/40 focus:outline-none focus:ring-2 focus:ring-orange/70 bg-cream/80 text-navy placeholder-transparent transition w-full" placeholder="you@email.com" />
-                <label htmlFor="email" className="absolute left-5 top-3 text-navy/60 bg-white/80 px-1 transition-all duration-200 pointer-events-none peer-focus:-top-5 peer-focus:text-xs peer-focus:text-orange peer-valid:-top-5 peer-valid:text-xs">Email</label>
+                <label htmlFor="email" className="absolute left-5 top-3 text-navy/60 bg-white/80 px-1 transition-all duration-200 pointer-events-none peer-focus:-top-5 peer-focus:text-xs peer-focus:text-orange peer-valid:-top-5 peer-valid:text-xs">Email *</label>
               </div>
+              {/* Phone */}
               <div className="relative">
                 <input id="phone" name="phone" type="tel" required value={form.phone} onChange={handleChange} className="peer px-5 py-3 rounded-xl border border-yellow/40 focus:outline-none focus:ring-2 focus:ring-orange/70 bg-cream/80 text-navy placeholder-transparent transition w-full" placeholder="Your Phone Number" />
-                <label htmlFor="phone" className="absolute left-5 top-3 text-navy/60 bg-white/80 px-1 transition-all duration-200 pointer-events-none peer-focus:-top-5 peer-focus:text-xs peer-focus:text-orange peer-valid:-top-5 peer-valid:text-xs">Phone</label>
+                <label htmlFor="phone" className="absolute left-5 top-3 text-navy/60 bg-white/80 px-1 transition-all duration-200 pointer-events-none peer-focus:-top-5 peer-focus:text-xs peer-focus:text-orange peer-valid:-top-5 peer-valid:text-xs">Phone *</label>
               </div>
-              <div className="relative">
-                <select id="reason" name="reason" value={form.reason} onChange={handleChange} className="peer px-5 py-3 rounded-xl border border-yellow/40 focus:outline-none focus:ring-2 focus:ring-orange/70 bg-cream/80 text-navy transition w-full">
-                  <option>Service Inquiry</option>
-                  <option>Document Status</option>
-                  <option>Feedback</option>
-                  <option>Other</option>
-                </select>
-                <label htmlFor="reason" className="absolute left-5 -top-5 text-xs text-orange bg-white/80 px-1">How can we help you?</label>
-              </div>
+              {/* Message */}
               <div className="relative">
                 <textarea id="message" name="message" rows={5} required value={form.message} onChange={handleChange} className="peer px-5 py-3 rounded-xl border border-yellow/40 focus:outline-none focus:ring-2 focus:ring-orange/70 bg-cream/80 text-navy placeholder-transparent transition w-full" placeholder="How can we help you?" />
-                <label htmlFor="message" className="absolute left-5 top-3 text-navy/60 bg-white/80 px-1 transition-all duration-200 pointer-events-none peer-focus:-top-5 peer-focus:text-xs peer-focus:text-orange peer-valid:-top-5 peer-valid:text-xs">Message</label>
+                <label htmlFor="message" className="absolute left-5 top-3 text-navy/60 bg-white/80 px-1 transition-all duration-200 pointer-events-none peer-focus:-top-5 peer-focus:text-xs peer-focus:text-orange peer-valid:-top-5 peer-valid:text-xs">Message *</label>
               </div>
             </div>
             <button type="submit" className="w-full bg-gradient-to-r from-orange to-yellow text-navy px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-200 flex items-center justify-center gap-2 hover-raise hover-scale">
@@ -146,9 +180,9 @@ export default function ContactForm() {
       <div className="mt-20">
         <h3 className="text-2xl font-bold-custom text-navy mb-6 text-center">Our Services</h3>
         <div className="flex flex-wrap justify-center gap-3">
-          {serviceKeywords.map((keyword, idx) => (
-            <Link key={idx} href={keyword.href} className="bg-orange/90 text-navy font-semibold px-4 py-2 rounded-full shadow hover:bg-yellow/90 transition text-sm md:text-base hover-raise hover-scale hover:underline">
-              {keyword.label}
+          {services.map((service, idx) => (
+            <Link key={idx} href={`/services/${service.toLowerCase().replace(/\s/g, '-')}`} className="bg-orange/90 text-navy font-semibold px-4 py-2 rounded-full shadow hover:bg-yellow/90 transition text-sm md:text-base hover-raise hover-scale hover:underline">
+              {service}
             </Link>
           ))}
         </div>
