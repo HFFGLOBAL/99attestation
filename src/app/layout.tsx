@@ -19,10 +19,8 @@ import WhatsAppButton from "./components/WhatsAppButton";
 // });
 
 export const metadata: Metadata = {
-  title: "99Attestation.com | Fast & Reliable Document Attestation Services",
   description: "Your trusted partner for attestation, apostille, embassy, and verification services.",
   openGraph: {
-    title: "99Attestation.com | Fast & Reliable Document Attestation Services",
     description: "Your trusted partner for attestation, apostille, embassy, and verification services.",
     url: "https://99attestation.com/",
     siteName: "99Attestation.com",
@@ -40,7 +38,6 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@99attestation",
-    title: "99Attestation.com | Fast & Reliable Document Attestation Services",
     description: "Your trusted partner for attestation, apostille, embassy, and verification services.",
     images: [
       {

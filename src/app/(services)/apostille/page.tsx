@@ -2,16 +2,37 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Apostille Services | 99Attestation",
-  description: "Get your documents apostilled quickly and securely for international use. Serving all Hague Convention countries.",
-  keywords: [
-    "apostille",
-    "apostille services",
-    "document apostille",
-    "hague convention",
-    "international documents",
-    "99attestation",
-  ],
+  title: "Apostille Services | Fast Document Legalization | 99Attestation.com",
+  description: "Get your documents apostilled for international use. Fast, reliable apostille services for educational, personal, and commercial documents. 25+ years experience.",
+  keywords: ["apostille", "document apostille", "international apostille", "legalization", "99attestation"],
+  openGraph: {
+    title: "Apostille Services | Fast Document Legalization | 99Attestation.com",
+    description: "Get your documents apostilled for international use. Fast, reliable apostille services for educational, personal, and commercial documents. 25+ years experience.",
+    url: "https://99attestation.com/services/apostille",
+    siteName: "99Attestation.com",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        width: 1200,
+        height: 630,
+        alt: "99Attestation - Apostille Services",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@99attestation",
+    title: "Apostille Services | Fast Document Legalization | 99Attestation.com",
+    description: "Get your documents apostilled for international use. Fast, reliable apostille services for educational, personal, and commercial documents. 25+ years experience.",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        alt: "99Attestation - Apostille Services",
+      },
+    ],
+  },
 };
 
 const apostilleTypes = [

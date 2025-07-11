@@ -36,16 +36,37 @@ const content = {
 };
 
 export const metadata: Metadata = {
-  title: "Educational Attestation | 99Attestation",
-  description: "Attest your degree, diploma, and academic certificates for study, work, or migration abroad. Fast, secure, and accepted in 100+ countries.",
-  keywords: ["Educational Attestation", "Degree Attestation", "Diploma Attestation", "Academic Certificates", "Study Abroad", "99Attestation"],
+  title: "Educational Document Attestation | Degree Certificate Legalization | 99Attestation.com",
+  description: "Get your educational documents attested for international use. Fast attestation for degrees, diplomas, transcripts, and certificates. 25+ years experience.",
+  keywords: ["educational attestation", "degree attestation", "certificate attestation", "transcript attestation", "99attestation"],
   openGraph: {
-    title: "Educational Attestation | 99Attestation",
-    description: "Attest your degree, diploma, and academic certificates for study, work, or migration abroad. Fast, secure, and accepted in 100+ countries.",
+    title: "Educational Document Attestation | Degree Certificate Legalization | 99Attestation.com",
+    description: "Get your educational documents attested for international use. Fast attestation for degrees, diplomas, transcripts, and certificates. 25+ years experience.",
     url: "https://99attestation.com/services/educational-attestation",
-    siteName: "99Attestation",
-    type: "website"
-  }
+    siteName: "99Attestation.com",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        width: 1200,
+        height: 630,
+        alt: "99Attestation - Educational Attestation Services",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@99attestation",
+    title: "Educational Document Attestation | Degree Certificate Legalization | 99Attestation.com",
+    description: "Get your educational documents attested for international use. Fast attestation for degrees, diplomas, transcripts, and certificates. 25+ years experience.",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        alt: "99Attestation - Educational Attestation Services",
+      },
+    ],
+  },
 };
 
 export default function EducationalAttestationPage() {

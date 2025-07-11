@@ -5,13 +5,13 @@ import Link from "next/link";
 
 const services = [
   "Educational Attestation",
-  "Personal Attestation",
+  "Personal Attestation", 
   "Commercial Attestation",
   "Apostille",
-  "Embassy Attestation",
-  "PCC/WES Verification",
-  "Translation",
-  "Other",
+  "HRD Attestation",
+  "MEA Attestation",
+  "PCC",
+  "WES Verification",
 ];
 
 const countryList = [
@@ -179,11 +179,24 @@ export default function ContactForm() {
       <div className="mt-20">
         <h3 className="text-2xl font-bold-custom text-navy mb-6 text-center">Our Services</h3>
         <div className="flex flex-wrap justify-center gap-3">
-          {services.map((service, idx) => (
-            <Link key={idx} href={`/services/${service.toLowerCase().replace(/\s/g, '-')}`} className="bg-orange/90 text-navy font-semibold px-4 py-2 rounded-full shadow hover:bg-yellow/90 transition text-sm md:text-base hover-raise hover-scale hover:underline">
-              {service}
-            </Link>
-          ))}
+          {services.map((service, idx) => {
+            const serviceRoutes: Record<string, string> = {
+              "Educational Attestation": "/services/educational-attestation",
+              "Personal Attestation": "/services/personal-attestation", 
+              "Commercial Attestation": "/services/commercial-attestation",
+              "Apostille": "/services/apostille",
+              "HRD Attestation": "/services/hrd-attestation",
+              "MEA Attestation": "/services/mea-attestation",
+              "PCC": "/services/pcc",
+              "WES Verification": "/services/wes-verification",
+            };
+            const href = serviceRoutes[service] || `/services/${service.toLowerCase().replace(/\s/g, '-')}`;
+            return (
+              <Link key={idx} href={href} className="bg-orange/90 text-navy font-semibold px-4 py-2 rounded-full shadow hover:bg-yellow/90 transition text-sm md:text-base hover-raise hover-scale hover-underline">
+                {service}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>

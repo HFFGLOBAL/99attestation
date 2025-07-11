@@ -7,11 +7,10 @@ const services = [
   { name: "Personal Attestation", href: "/services/personal-attestation" },
   { name: "Commercial Attestation", href: "/services/commercial-attestation" },
   { name: "Apostille", href: "/services/apostille" },
-  { name: "HRD Attestation", href: "/services/hrd" },
-  { name: "MEA Attestation", href: "/services/mea" },
+  { name: "HRD Attestation", href: "/services/hrd-attestation" },
+  { name: "MEA Attestation", href: "/services/mea-attestation" },
   { name: "PCC", href: "/services/pcc" },
   { name: "WES Verification", href: "/services/wes-verification" },
- 
 ];
 
 export default function Footer() {

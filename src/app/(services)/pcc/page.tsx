@@ -33,16 +33,37 @@ const content = {
 };
 
 export const metadata: Metadata = {
-  title: "Police Clearance Certificate (PCC) Attestation | 99Attestation",
-  description: "Get your Police Clearance Certificate attested for use abroad. Fast, secure, and accepted internationally.",
-  keywords: ["PCC Attestation", "Police Clearance Certificate", "Migration", "Employment", "Visa", "99Attestation"],
+  title: "PCC Attestation | Police Clearance Certificate | 99Attestation.com",
+  description: "Get your Police Clearance Certificate (PCC) attested for international use. Fast PCC attestation for immigration and employment. 25+ years experience.",
+  keywords: ["PCC attestation", "Police Clearance Certificate", "PCC certificate", "immigration attestation", "99attestation"],
   openGraph: {
-    title: "Police Clearance Certificate (PCC) Attestation | 99Attestation",
-    description: "Get your Police Clearance Certificate attested for use abroad. Fast, secure, and accepted internationally.",
+    title: "PCC Attestation | Police Clearance Certificate | 99Attestation.com",
+    description: "Get your Police Clearance Certificate (PCC) attested for international use. Fast PCC attestation for immigration and employment. 25+ years experience.",
     url: "https://99attestation.com/services/pcc",
-    siteName: "99Attestation",
-    type: "website"
-  }
+    siteName: "99Attestation.com",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        width: 1200,
+        height: 630,
+        alt: "99Attestation - PCC Attestation Services",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@99attestation",
+    title: "PCC Attestation | Police Clearance Certificate | 99Attestation.com",
+    description: "Get your Police Clearance Certificate (PCC) attested for international use. Fast PCC attestation for immigration and employment. 25+ years experience.",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        alt: "99Attestation - PCC Attestation Services",
+      },
+    ],
+  },
 };
 
 export default function PCCPage() {

@@ -5,16 +5,37 @@ import Link from 'next/link';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Commercial Attestation | 99Attestation",
-  description: "Attest your business, export, and company documents for international trade, business setup, and legal compliance.",
-  keywords: ["Commercial Attestation", "Business Attestation", "Export Documents", "Company Documents", "International Trade", "99Attestation"],
+  title: "Commercial Document Attestation | Business Certificate Legalization | 99Attestation.com",
+  description: "Get your commercial documents attested for international business. Fast attestation for company certificates, invoices, and business documents. 25+ years experience.",
+  keywords: ["commercial attestation", "business attestation", "company certificate attestation", "commercial documents", "99attestation"],
   openGraph: {
-    title: "Commercial Attestation | 99Attestation",
-    description: "Attest your business, export, and company documents for international trade, business setup, and legal compliance.",
+    title: "Commercial Document Attestation | Business Certificate Legalization | 99Attestation.com",
+    description: "Get your commercial documents attested for international business. Fast attestation for company certificates, invoices, and business documents. 25+ years experience.",
     url: "https://99attestation.com/services/commercial-attestation",
-    siteName: "99Attestation",
-    type: "website"
-  }
+    siteName: "99Attestation.com",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        width: 1200,
+        height: 630,
+        alt: "99Attestation - Commercial Attestation Services",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@99attestation",
+    title: "Commercial Document Attestation | Business Certificate Legalization | 99Attestation.com",
+    description: "Get your commercial documents attested for international business. Fast attestation for company certificates, invoices, and business documents. 25+ years experience.",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        alt: "99Attestation - Commercial Attestation Services",
+      },
+    ],
+  },
 };
 
 const content = {

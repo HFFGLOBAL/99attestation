@@ -4,10 +4,10 @@ import Link from "next/link";
 
 export const metadata = {
   title: "99Attestation.com | Fast & Reliable Document Attestation Services",
-  description: "Your trusted partner for attestation, apostille, embassy, and verification services. 15+ years experience, 10,000+ documents processed, 5000+ happy customers.",
+  description: "Your trusted partner for attestation, apostille, embassy, and verification services. 25+ years experience, 10,000+ documents processed, 5000+ happy customers.",
   openGraph: {
     title: "99Attestation.com | Fast & Reliable Document Attestation Services",
-    description: "Your trusted partner for attestation, apostille, embassy, and verification services. 15+ years experience, 10,000+ documents processed, 5000+ happy customers.",
+    description: "Your trusted partner for attestation, apostille, embassy, and verification services. 25+ years experience, 10,000+ documents processed, 5000+ happy customers.",
     url: "https://99attestation.com/",
     siteName: "99Attestation.com",
     images: [
@@ -25,7 +25,7 @@ export const metadata = {
     card: "summary_large_image",
     site: "@99attestation",
     title: "99Attestation.com | Fast & Reliable Document Attestation Services",
-    description: "Your trusted partner for attestation, apostille, embassy, and verification services. 15+ years experience, 10,000+ documents processed, 5000+ happy customers.",
+    description: "Your trusted partner for attestation, apostille, embassy, and verification services. 25+ years experience, 10,000+ documents processed, 5000+ happy customers.",
     images: [
       {
         url: "/hero-world-map.png",

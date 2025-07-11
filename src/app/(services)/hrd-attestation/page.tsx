@@ -33,16 +33,37 @@ const content = {
 };
 
 export const metadata: Metadata = {
-  title: "HRD Attestation | 99Attestation",
-  description: "Get your educational documents attested by the Human Resource Department (HRD) for use abroad.",
-  keywords: ["HRD Attestation", "Human Resource Department", "Educational Documents", "Attestation", "99Attestation"],
+  title: "HRD Attestation | Human Resource Department Certificate | 99Attestation.com",
+  description: "Get your educational documents attested by HRD (Human Resource Department). Fast HRD attestation for degrees and certificates. 25+ years experience.",
+  keywords: ["HRD attestation", "Human Resource Department", "educational attestation", "HRD certificate", "99attestation"],
   openGraph: {
-    title: "HRD Attestation | 99Attestation",
-    description: "Get your educational documents attested by the Human Resource Department (HRD) for use abroad.",
+    title: "HRD Attestation | Human Resource Department Certificate | 99Attestation.com",
+    description: "Get your educational documents attested by HRD (Human Resource Department). Fast HRD attestation for degrees and certificates. 25+ years experience.",
     url: "https://99attestation.com/services/hrd-attestation",
-    siteName: "99Attestation",
-    type: "website"
-  }
+    siteName: "99Attestation.com",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        width: 1200,
+        height: 630,
+        alt: "99Attestation - HRD Attestation Services",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@99attestation",
+    title: "HRD Attestation | Human Resource Department Certificate | 99Attestation.com",
+    description: "Get your educational documents attested by HRD (Human Resource Department). Fast HRD attestation for degrees and certificates. 25+ years experience.",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        alt: "99Attestation - HRD Attestation Services",
+      },
+    ],
+  },
 };
 
 export default function HRDAttestationPage() {

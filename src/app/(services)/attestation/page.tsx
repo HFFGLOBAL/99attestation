@@ -2,9 +2,37 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Attestation Services | 99Attestation",
-  description: "Fast, reliable, and secure attestation services for all your documents. Serving UAE, Oman, USA, UK, Canada, and more.",
-  keywords: ["attestation", "document attestation", "UAE attestation", "Oman attestation", "apostille", "99attestation"],
+  title: "Document Attestation Services | Embassy Legalization | 99Attestation.com",
+  description: "Professional document attestation services for embassy legalization. Fast, secure attestation for educational, personal, and commercial documents. 25+ years experience.",
+  keywords: ["attestation", "document attestation", "embassy attestation", "legalization", "99attestation"],
+  openGraph: {
+    title: "Document Attestation Services | Embassy Legalization | 99Attestation.com",
+    description: "Professional document attestation services for embassy legalization. Fast, secure attestation for educational, personal, and commercial documents. 25+ years experience.",
+    url: "https://99attestation.com/services/attestation",
+    siteName: "99Attestation.com",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        width: 1200,
+        height: 630,
+        alt: "99Attestation - Document Attestation Services",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@99attestation",
+    title: "Document Attestation Services | Embassy Legalization | 99Attestation.com",
+    description: "Professional document attestation services for embassy legalization. Fast, secure attestation for educational, personal, and commercial documents. 25+ years experience.",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        alt: "99Attestation - Document Attestation Services",
+      },
+    ],
+  },
 };
 
 const attestationTypes = [

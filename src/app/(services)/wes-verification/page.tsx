@@ -33,16 +33,37 @@ const content = {
 };
 
 export const metadata: Metadata = {
-  title: "WES Verification | 99Attestation",
-  description: "Get your documents verified for WES (World Education Services) evaluation. Fast, secure, and accepted internationally.",
-  keywords: ["WES Verification", "Document Verification", "Canada", "USA", "World Education Services", "99Attestation"],
+  title: "WES Verification | World Education Services | 99Attestation.com",
+  description: "Get your documents verified for WES (World Education Services) evaluation. Fast WES verification for Canada and USA immigration. 25+ years experience.",
+  keywords: ["WES verification", "World Education Services", "WES evaluation", "Canada immigration", "USA immigration", "99attestation"],
   openGraph: {
-    title: "WES Verification | 99Attestation",
-    description: "Get your documents verified for WES (World Education Services) evaluation. Fast, secure, and accepted internationally.",
+    title: "WES Verification | World Education Services | 99Attestation.com",
+    description: "Get your documents verified for WES (World Education Services) evaluation. Fast WES verification for Canada and USA immigration. 25+ years experience.",
     url: "https://99attestation.com/services/wes-verification",
-    siteName: "99Attestation",
-    type: "website"
-  }
+    siteName: "99Attestation.com",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        width: 1200,
+        height: 630,
+        alt: "99Attestation - WES Verification Services",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@99attestation",
+    title: "WES Verification | World Education Services | 99Attestation.com",
+    description: "Get your documents verified for WES (World Education Services) evaluation. Fast WES verification for Canada and USA immigration. 25+ years experience.",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        alt: "99Attestation - WES Verification Services",
+      },
+    ],
+  },
 };
 
 export default function WESVerificationPage() {

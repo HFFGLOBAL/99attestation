@@ -36,16 +36,37 @@ const content = {
 };
 
 export const metadata: Metadata = {
-  title: "Personal Attestation | 99Attestation",
-  description: "Attest your birth, marriage, divorce, and other personal documents for family, legal, or immigration purposes.",
-  keywords: ["Personal Attestation", "Birth Certificate", "Marriage Certificate", "Divorce Certificate", "Immigration", "99Attestation"],
+  title: "Personal Document Attestation | Birth Certificate & Marriage Certificate | 99Attestation.com",
+  description: "Get your personal documents attested for international use. Fast attestation for birth certificates, marriage certificates, and personal documents. 25+ years experience.",
+  keywords: ["personal attestation", "birth certificate attestation", "marriage certificate attestation", "personal documents", "99attestation"],
   openGraph: {
-    title: "Personal Attestation | 99Attestation",
-    description: "Attest your birth, marriage, divorce, and other personal documents for family, legal, or immigration purposes.",
+    title: "Personal Document Attestation | Birth Certificate & Marriage Certificate | 99Attestation.com",
+    description: "Get your personal documents attested for international use. Fast attestation for birth certificates, marriage certificates, and personal documents. 25+ years experience.",
     url: "https://99attestation.com/services/personal-attestation",
-    siteName: "99Attestation",
-    type: "website"
-  }
+    siteName: "99Attestation.com",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        width: 1200,
+        height: 630,
+        alt: "99Attestation - Personal Attestation Services",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@99attestation",
+    title: "Personal Document Attestation | Birth Certificate & Marriage Certificate | 99Attestation.com",
+    description: "Get your personal documents attested for international use. Fast attestation for birth certificates, marriage certificates, and personal documents. 25+ years experience.",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        alt: "99Attestation - Personal Attestation Services",
+      },
+    ],
+  },
 };
 
 export default function PersonalAttestationPage() {

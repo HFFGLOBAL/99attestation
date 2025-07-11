@@ -33,16 +33,37 @@ const content = {
 };
 
 export const metadata: Metadata = {
-  title: "MEA Attestation | 99Attestation",
-  description: "Get your documents attested by the Ministry of External Affairs (MEA) for international use.",
-  keywords: ["MEA Attestation", "Ministry of External Affairs", "Document Attestation", "International", "99Attestation"],
+  title: "MEA Attestation | Ministry of External Affairs Certificate | 99Attestation.com",
+  description: "Get your documents attested by MEA (Ministry of External Affairs). Fast MEA attestation for international use. 25+ years experience.",
+  keywords: ["MEA attestation", "Ministry of External Affairs", "MEA certificate", "international attestation", "99attestation"],
   openGraph: {
-    title: "MEA Attestation | 99Attestation",
-    description: "Get your documents attested by the Ministry of External Affairs (MEA) for international use.",
+    title: "MEA Attestation | Ministry of External Affairs Certificate | 99Attestation.com",
+    description: "Get your documents attested by MEA (Ministry of External Affairs). Fast MEA attestation for international use. 25+ years experience.",
     url: "https://99attestation.com/services/mea-attestation",
-    siteName: "99Attestation",
-    type: "website"
-  }
+    siteName: "99Attestation.com",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        width: 1200,
+        height: 630,
+        alt: "99Attestation - MEA Attestation Services",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@99attestation",
+    title: "MEA Attestation | Ministry of External Affairs Certificate | 99Attestation.com",
+    description: "Get your documents attested by MEA (Ministry of External Affairs). Fast MEA attestation for international use. 25+ years experience.",
+    images: [
+      {
+        url: "/hero-world-map.png",
+        alt: "99Attestation - MEA Attestation Services",
+      },
+    ],
+  },
 };
 
 export default function MEAAttestationPage() {
