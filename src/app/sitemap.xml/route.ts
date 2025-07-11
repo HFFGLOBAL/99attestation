@@ -19,7 +19,6 @@ const staticRoutes = [
   '/hrd-attestation',
   '/mea-attestation',
   '/pcc',
-  '/translation',
   '/wes-verification',
   '/track',
 ];
@@ -28,7 +27,7 @@ const staticRoutes = [
 const countryCodes = ['uae', 'oman', 'usa', 'uk', 'canada'];
 
 export async function GET() {
-  const baseUrl = 'https://yourdomain.com'; // <-- CHANGE THIS TO YOUR DOMAIN
+  const baseUrl = 'https://99attestation.com';
   const urls = staticRoutes.map(
     (route) => `<url><loc>${baseUrl}${route}</loc></url>`
   );
