@@ -1,7 +1,6 @@
 import SectionHeader from '../../components/SectionHeader';
 import CTAButton from '../../components/CTAButton';
 import ServiceCard from '../../components/ServiceCard';
-import Link from 'next/link';
 import type { Metadata } from "next";
 import { IdentificationIcon, CheckBadgeIcon, GlobeAltIcon, ClockIcon, ShieldCheckIcon, UserGroupIcon, HeartIcon } from '@heroicons/react/24/solid';
 import { FaRegSmile, FaUserFriends, FaGlobeAsia } from 'react-icons/fa';

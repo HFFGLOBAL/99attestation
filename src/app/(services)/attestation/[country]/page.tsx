@@ -1,7 +1,6 @@
 "use client";
 import SectionHeader from '../../../components/SectionHeader';
 import CTAButton from '../../../components/CTAButton';
-import Link from 'next/link';
 import { useParams } from 'next/navigation';
 
 const documents = [
