@@ -24,7 +24,8 @@ export async function generateStaticParams() {
   return countries.map((country) => ({ country }));
 }
 
-export default function Page({ params }: { params: Record<string, string> }) {
+export default function Page(props: any) {
+  const { params } = props;
   return (
     <>
       <Breadcrumbs items={[
