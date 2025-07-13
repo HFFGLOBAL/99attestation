@@ -1,5 +1,6 @@
 // pages/index.tsx (or .js depending on your project)
 
+import Image from 'next/image';
 import { Metadata } from 'next'
 import { 
   CheckCircleIcon, 
@@ -10,10 +11,8 @@ import {
   BuildingOfficeIcon,
   DocumentTextIcon,
   GlobeAltIcon,
-  PhoneIcon,
-  MapPinIcon
+  PhoneIcon
 } from '@heroicons/react/24/outline'
-import CTAButton from '../components/CTAButton'
 import ServiceCard from '../components/ServiceCard'
 import FAQAccordion from './FAQAccordion' // Assuming this component is defined elsewhere
 
@@ -174,7 +173,7 @@ export default function BangalorePage() {
           </div>
           {/* Hero Image/Visual */}
           <div className="flex-1 flex justify-center md:justify-end">
-            <img src="/hero-world-map.png" alt="Bangalore Attestation Services" width={620} height={420} className="rounded-xl object-cover" />
+            <Image src="/hero-world-map.png" alt="Bangalore Attestation Services" width={620} height={420} className="rounded-xl object-cover" />
           </div>
         </div>
       </section>
@@ -289,7 +288,7 @@ export default function BangalorePage() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4 italic">"{testimonial.content}"</p>
+                <p className="text-gray-700 mb-4 italic">&quot;{testimonial.content}&quot;</p>
                 <div>
                   <p className="font-semibold text-navy-900">{testimonial.name}</p>
                   <p className="text-sm text-gray-500">{testimonial.role}</p>
