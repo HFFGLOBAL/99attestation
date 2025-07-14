@@ -141,10 +141,10 @@ export default function BangalorePage() {
       <section className="relative bg-white pt-4 pb-12 px-4 sm:px-6 fade-in">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1 text-center md:text-left">
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-navy-900 mb-4">
-              Attestation Services in <span className="text-orange-500">Bangalore</span>
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-navy mb-4">
+              Attestation Services in <span className="text-orange">Bangalore</span>
             </h1>
-            <p className="text-lg text-navy-800 mb-6">
+            <p className="text-lg text-navy mb-6">
               Get fast, reliable, and government-approved attestation, apostille, and document verification services in Bangalore. Local expertise, transparent pricing, and dedicated support for all your document needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-6">
@@ -183,11 +183,11 @@ export default function BangalorePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             {/* Assuming text-navy is a dark color, it should be visible on gray-50 */}
-            <h2 className="text-3xl lg:text-4xl font-bold text-navy-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-4">
               Our Attestation Services in Bangalore
             </h2>
             {/* Assuming text-navy is a dark color, it should be visible on gray-50 */}
-            <p className="text-lg text-navy-800 max-w-3xl mx-auto">
+            <p className="text-lg text-navy max-w-3xl mx-auto">
               Comprehensive document attestation and verification services tailored for Bangalore residents and businesses
             </p>
           </div>
@@ -207,11 +207,11 @@ export default function BangalorePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             {/* Assuming text-navy is a dark color, it should be visible on white */}
-            <h2 className="text-3xl lg:text-4xl font-bold text-navy-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-4">
               Why Choose Our Attestation Services in Bangalore?
             </h2>
             {/* Assuming text-navy is a dark color, it should be visible on white */}
-            <p className="text-lg text-navy-800 max-w-3xl mx-auto">
+            <p className="text-lg text-navy   max-w-3xl mx-auto">
               Trusted by thousands of clients across Bangalore for reliable and efficient document attestation
             </p>
           </div>
@@ -220,42 +220,42 @@ export default function BangalorePage() {
               <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <ClockIcon className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-navy-900 mb-2">Fast Processing</h3>
+              <h3 className="text-xl font-semibold text-navy mb-2">Fast Processing</h3>
               <p className="text-gray-600">Quick turnaround times with express options available for urgent requirements</p>
             </div>
             <div className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
               <div className="w-16 h-16 bg-navy-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <ShieldCheckIcon className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-navy-900 mb-2">100% Secure</h3>
+              <h3 className="text-xl font-semibold text-navy mb-2">100% Secure</h3>
               <p className="text-gray-600">Your documents are handled with utmost care and security throughout the process</p>
             </div>
             <div className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
               <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <UserGroupIcon className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-navy-900 mb-2">Expert Team</h3>
+              <h3 className="text-xl font-semibold text-navy mb-2">Expert Team</h3>
               <p className="text-gray-600">Experienced professionals who understand all attestation requirements</p>
             </div>
             <div className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
               <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <CheckCircleIcon className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-navy-900 mb-2">Doorstep Service</h3>
+              <h3 className="text-xl font-semibold text-navy mb-2">Doorstep Service</h3>
               <p className="text-gray-600">Convenient document collection and delivery across Bangalore</p>
             </div>
             <div className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
               <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <GlobeAltIcon className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-navy-900 mb-2">International Recognition</h3>
+              <h3 className="text-xl font-semibold text-navy mb-2">International Recognition</h3>
               <p className="text-gray-600">All attestations are recognized by foreign embassies and organizations</p>
             </div>
             <div className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
               <div className="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <PhoneIcon className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-navy-900 mb-2">24/7 Support</h3>
+              <h3 className="text-xl font-semibold text-navy mb-2">24/7 Support</h3>
               <p className="text-gray-600">Round-the-clock customer support to answer all your queries</p>
             </div>
           </div>
@@ -267,11 +267,11 @@ export default function BangalorePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             {/* Assuming text-navy-900 is a dark color, it should be visible on gray-50 */}
-            <h2 className="text-3xl lg:text-4xl font-bold text-navy-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-4">
               What Our Bangalore Clients Say
             </h2>
             {/* Assuming text-navy-800 is a dark color, it should be visible on gray-50 */}
-            <p className="text-lg text-navy-800 max-w-3xl mx-auto">
+            <p className="text-lg text-navy max-w-3xl mx-auto">
               Trusted by thousands of satisfied clients across Bangalore
             </p>
           </div>
@@ -315,7 +315,7 @@ export default function BangalorePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             {/* Assuming text-navy is a dark color, it should be visible on white */}
-            <h2 className="text-3xl lg:text-4xl font-bold text-navy-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-4">
               Frequently Asked Questions
             </h2>
             {/* Assuming text-navy is a dark color, it should be visible on white */}
