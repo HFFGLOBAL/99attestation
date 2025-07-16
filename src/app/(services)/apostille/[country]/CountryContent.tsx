@@ -99,7 +99,7 @@ export default function CountryContent({ countryName, documents, apostilleTypes,
             <span>A: Most apostille requests are completed within 5-10 business days.</span>
           </li>
         </ul>
-        <p style={{textAlign: 'center', marginTop: '1.5rem'}}>Still have questions? Visit our <Link href="/faq">FAQ</Link> page or <Link href="/contact">contact us</Link>.</p>
+        <p className="text-navy text-center mt-6">Still have questions? Visit our <Link href="/faq" className="text-orange hover:underline">FAQ</Link> page or <Link href="/contact" className="text-orange hover:underline">contact us</Link>.</p>
       </section>
     </main>
   );

@@ -33,7 +33,7 @@ const whatsappNumber = '9686924808'; // Replace with your WhatsApp number
 const whatsappMessage = encodeURIComponent('Hello, I need expert advice on apostille services.');
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-export async function generateMetadata({ params }: { params: { country: string } }): Promise<Metadata> {
+export function generateMetadata({ params }: { params: { country: string } }): Metadata {
   const country = params.country;
   return {
     title: `${country.toUpperCase()} Apostille Services | 99Attestation.com`,
