@@ -32,8 +32,8 @@ const whatsappNumber = '9686924808'; // Replace with your WhatsApp number
 const whatsappMessage = encodeURIComponent('Hello, I need expert advice on attestation services.');
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-export async function generateMetadata({ params }: { params: { country?: string | string[] } }): Promise<Metadata> {
-  const country = Array.isArray(params.country) ? params.country[0] : params.country || "Country";
+export async function generateMetadata({ params }: { params: Promise<{ country: string }> }): Promise<Metadata> {
+  const { country } = await params;
   return {
     title: `${country.toUpperCase()} Attestation Services | 99Attestation.com`,
     description: `Get fast and reliable attestation services for ${country}.`,
@@ -66,11 +66,11 @@ export async function generateMetadata({ params }: { params: { country?: string 
   };
 }
 
-export default function Page({ params }: { params: { country?: string | string[] } }) {
-  const countryName = Array.isArray(params?.country) ? params.country[0] : params?.country || 'Country';
+export default async function Page({ params }: { params: Promise<{ country: string }> }) {
+  const { country } = await params;
   return (
     <CountryContent
-      countryName={countryName}
+      countryName={country}
       documents={documents}
       attestationTypes={attestationTypes}
       testimonials={testimonials}
