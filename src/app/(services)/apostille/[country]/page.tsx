@@ -33,8 +33,8 @@ const whatsappNumber = '9686924808'; // Replace with your WhatsApp number
 const whatsappMessage = encodeURIComponent('Hello, I need expert advice on apostille services.');
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-export async function generateMetadata({ params }: { params: { country: string } }): Promise<Metadata> {
-  const country = params.country;
+export async function generateMetadata({ params }: { params: Promise<{ country: string }> }): Promise<Metadata> {
+  const { country } = await params;
   return {
     title: `${country.toUpperCase()} Apostille Services | 99Attestation.com`,
     description: `Get fast and reliable apostille services for ${country}.`,
@@ -70,11 +70,11 @@ export async function generateMetadata({ params }: { params: { country: string }
 
 
 interface PageProps {
-  params: { country: string };
+  params: Promise<{ country: string }>;
 }
 
-export default function Page({ params }: PageProps) {
-  const country = params.country;
+export default async function Page({ params }: PageProps) {
+  const { country } = await params;
   return (
     <CountryContent
       countryName={country}

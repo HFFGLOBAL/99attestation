@@ -54,7 +54,7 @@ export default function Footer() {
         <div>
           <h4 className="font-bold-custom text-lg mb-3 text-orange">Contact Us</h4>
           <ul className="text-sm space-y-2 mb-4">
-            <li className="flex items-center gap-2"><PhoneIcon className="w-4 h-4" /> <span className="font-medium">9686924808</span></li>
+            <li className="flex items-center gap-2"><PhoneIcon className="w-4 h-4" /> <span className="font-medium">+91 96869-24808</span></li>
             <li className="flex items-center gap-2"><EnvelopeIcon className="w-4 h-4" /> <span className="font-medium">info@99attestation.com</span></li>
             <li className="flex items-center gap-2"><MapPinIcon className="w-4 h-4" /> <span className="font-medium">#44, 3rd Floor, Church Street, Bangalore 560001</span></li>
           </ul>

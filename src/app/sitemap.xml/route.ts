@@ -23,8 +23,11 @@ const staticRoutes = [
   '/track',
 ];
 
-// Example dynamic country codes (should be generated from your data source in production)
-const countryCodes = ['uae', 'oman', 'usa', 'uk', 'canada'];
+// Updated dynamic country codes from attestation and apostille pages
+const countryCodes = [
+  'uae', 'oman', 'qatar', 'kuwait', 'saudi', 'bahrain', 'usa', 'uk', 'canada', 'australia', 'italy', 'france', 'germany', 'singapore', 'southafrica', 'malaysia', 'newzealand', 'spain', 'netherlands', 'switzerland', 'japan',
+  'poland', 'brazil', 'argentina', 'mexico', 'chile', 'sweden', 'norway', 'denmark', 'finland', 'greece', 'israel', 'southkorea', 'estonia', 'hungary', 'portugal', 'turkey'
+];
 
 export async function GET() {
   const baseUrl = 'https://99attestation.com';
